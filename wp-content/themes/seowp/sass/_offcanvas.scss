@@ -1,0 +1,225 @@
+@import "compass/css3";
+
+
+.close-offcanvas {
+  // display: inline-block;
+  // float: right;
+  text-align: right;
+  font-size: 24px;
+  margin-right: -20px;
+  margin-top: -20px;
+
+  a {
+    display: inline-block;
+    padding: 20px;
+    color: rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      color: #000;
+    }
+
+    &> span {
+      display: none;
+    }
+  }
+}
+
+
+.off-canvas__overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 20;
+  display: none;
+}
+
+.move-left a.off-canvas__overlay {
+  display: block;
+}
+
+.off-canvas-area {
+	padding: 20px;
+      font-size: 14px;
+}
+
+
+// .off-canvas-wrap, 
+// .inner-wrap, 
+nav.tab-bar, 
+.left-off-canvas-menu, .left-off-canvas-menu *, 
+.right-off-canvas-menu, .move-right a.exit-off-canvas, 
+.move-left a.exit-off-canvas {
+  -webkit-backface-visibility: hidden;
+  // this makes me problem with fixes section backgrounds
+}
+
+.off-canvas-wrap, .inner-wrap {
+  position: relative;
+  width: 100%; }
+
+.left-off-canvas-menu, .right-off-canvas-menu {
+  width: 260px;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  overflow-y: auto;
+	background: #FAFAFA;
+  z-index: 1001;
+  @include box-shadow ( 2px 0 10px 0 rgba(0, 0, 0, 0.2) inset );
+  // box-sizing: content-box; 
+}
+
+section.left-small, section.right-small {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  position: absolute;
+  top: 0; }
+
+.off-canvas-wrap {
+  overflow: hidden; }
+
+.inner-wrap {
+  *zoom: 1;
+  -webkit-transition: -webkit-transform 500ms ease;
+  -moz-transition: -moz-transform 500ms ease;
+  -ms-transition: -ms-transform 500ms ease;
+  -o-transition: -o-transform 500ms ease;
+  transition: transform 500ms ease; }
+  .inner-wrap:before, .inner-wrap:after {
+    content: " ";
+    display: table; }
+  .inner-wrap:after {
+    clear: both; }
+
+nav.tab-bar {
+  background: #333333;
+  color: white;
+  height: 2.8125rem;
+  line-height: 2.8125rem;
+  position: relative; }
+  nav.tab-bar h1, nav.tab-bar h2, nav.tab-bar h3, nav.tab-bar h4, nav.tab-bar h5, nav.tab-bar h6 {
+    color: white;
+    font-weight: bold;
+    line-height: 2.8125rem;
+    margin: 0; }
+  nav.tab-bar h1, nav.tab-bar h2, nav.tab-bar h3, nav.tab-bar h4 {
+    font-size: 1.125rem; }
+
+section.left-small {
+  border-right: solid 1px #1a1a1a;
+  box-shadow: 1px 0 0 #4d4d4d;
+  left: 0; }
+
+section.right-small {
+  border-left: solid 1px #4d4d4d;
+  box-shadow: -1px 0 0 #1a1a1a;
+  right: 0; }
+
+section.tab-bar-section {
+  padding: 0 0.625rem;
+  position: absolute;
+  text-align: center;
+  height: 2.8125rem;
+  top: 0; }
+  @media only screen and (min-width: 40.063em) {
+    section.tab-bar-section {
+      text-align: left; } }
+  section.tab-bar-section.left {
+    left: 0;
+    right: 2.8125rem; }
+  section.tab-bar-section.right {
+    left: 2.8125rem;
+    right: 0; }
+  section.tab-bar-section.middle {
+    left: 2.8125rem;
+    right: 2.8125rem; }
+
+a.menu-icon {
+  display: inline-block;
+  float: right;
+  height: 100%;
+  padding: 0 40px 0 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 30%;
+
+    &:before, span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:before {
+      content: "";
+      height: 100%;
+    }
+}
+  a.menu-icon span {
+    width: 1.25rem;
+    height: 0;
+    margin-top: -30px;
+
+    -webkit-box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
+    box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; 
+  }
+
+.left-off-canvas-menu {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
+
+.right-off-canvas-menu {
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  right: 0; }
+
+ul.off-canvas-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  ul.off-canvas-list li label {
+    padding: 0.3rem 0.9375rem;
+    color: #999999;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #444444;
+    border-top: 1px solid #5e5e5e;
+    border-bottom: none;
+    margin: 0; }
+  ul.off-canvas-list li a {
+    display: block;
+    padding: 0.66667rem;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #262626; }
+
+.move-right > .inner-wrap {
+  -webkit-transform: translate3d(260px, 0, 0);
+  -moz-transform: translate3d(260px, 0, 0);
+  -ms-transform: translate3d(260px, 0, 0);
+  -o-transform: translate3d(260px, 0, 0);
+  transform: translate3d(260px, 0, 0); }
+
+.move-left > .inner-wrap {
+  -webkit-transform: translate3d(-260px, 0, 0);
+  -moz-transform: translate3d(-260px, 0, 0);
+  -ms-transform: translate3d(-260px, 0, 0);
+  -o-transform: translate3d(-260px, 0, 0);
+  transform: translate3d(-260px, 0, 0); }
+
+
+.lt-ie10 .left-off-canvas-menu {
+  left: -260px; }
+.lt-ie10 .right-off-canvas-menu {
+  right: -260px; }
+.lt-ie10 .move-left > .inner-wrap {
+  right: 260px; }
+.lt-ie10 .move-right > .inner-wrap {
+  left: 260px; }

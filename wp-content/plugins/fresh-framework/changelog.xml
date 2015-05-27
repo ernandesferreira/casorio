@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="1.4.6" date="2014-06-30">
+        <change>Problems with HTTPS in WP admin fix</change>
+    </release>
+    <release version="1.4.5" date="2014-06-27">
+        <change>Additions for our new Favicon plugin</change>
+    </release>
+    <release version="1.4.4" date="2014-06-24">
+        <change>Bugfix - removing use tracy statement</change>
+    </release>
+    <release version="1.4.3" date="2014-06-09">
+        <change>Bugfix - bootstrap.php was using a use statement</change>
+    </release>
+    <release version="1.4.2" date="2014-06-06">
+        <change>Bugfix for Performance Cache minification - fixed another small problem</change>
+    </release>
+    <release version="1.4.1" date="2014-06-04">
+        <change>Bugfix for Performance Cache minification</change>
+    </release>
+    <release version="1.4.0" date="2014-05-20">
+        <change>Additions for our new File Editor plugin</change>
+    </release>
+    <release version="1.3.1" date="2014-05-20">
+        <change>Bugfix and small additions related to our Fresh Sidebar Manager plugin</change>
+    </release>
+    <release version="1.3.0" date="2014-05-16">
+        <change>Additions for our new Fresh Sidebar Manager plugin</change>
+    </release>
+    <release version="1.2.3" date="2014-05-12">
+        <change>Error in class.ffConditionalLogicEvaluator.php on line 185 = fixed</change>
+    </release>
+    <release version="1.2.2" date="2014-05-12">
+        <change>Fixes and improvements related to Custom Code plugin</change>
+    </release>
+    <release version="1.2.1" date="2014-05-11">
+        <change>Fixes and improvements related to Custom Code plugin</change>
+    </release>
+    <release version="1.2.0" date="2014-05-09">
+        <change>Additions for our new Custom Code plugin</change>
+    </release>
+    <release version="1.1.2" date="2014-03-05">
+        <change>Version bump</change>
+    </release>
+    <release version="1.1.1" date="2014-03-05">
+        <change>Credits added</change>
+    </release>
+    <release version="1.1.0" date="2014-03-05">
+        <change>Added scssphp library</change>
+        <change>Small change to microtime functions</change>
+        <change>Better caching</change>
+    </release>
+    <release version="1.0.1" date="2014-03-04">
+    	<change>Ability to add priority for hooks</change>
+        <change>Ability to upload fonts in wp-admin</change>
+        <change>Better management with ZIP files</change>
+        <change>Added lessphp library</change>
+        <change>PHP5.2 crashing</change>
+        <change>Better cache management</change>
+    </release>
+    <release version="1.0.0" date="2014-02-28">
+        <change>Initial release</change>
+    </release>
+</changelog>

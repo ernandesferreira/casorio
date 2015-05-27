@@ -1,0 +1,117 @@
+/**
+* ----------------------------------------------------------------------
+* Pre-footer Call to action
+*/
+
+.calltoaction-area {
+	position: relative;
+	z-index: 2;
+	padding: 0 20px;
+	text-align: center;
+	@include transition(all .5s ease 0s);
+
+	// @include transition(all 0.5s ease 0s);
+
+	// need this pseudo element for vertical alignment
+	// of the panel content
+	&:before {
+		content: "";
+		width: 0;
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+
+.calltoaction-area__content {
+	display: inline;
+	font-size: 16px;
+	vertical-align: middle;
+
+	position: relative;
+	z-index: 1;
+}
+
+.calltoaction-area__message {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1.2;
+}
+
+
+.calltoaction-area__cta-icon {
+	// font-size: 150%;
+	margin-top: -.15em;
+	opacity: 0.5;
+	vertical-align: middle;
+}
+
+.calltoaction-area__cta-link {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+.in-wp-customizer .calltoaction-area {
+	display: block;
+}
+
+@media only screen and (max-width: 767px) {
+	body {
+		.calltoaction-area {
+			height: auto;
+			padding: 30px 20px;
+			line-height: 1.3;
+		}
+
+		.calltoaction-area__content {
+			font-size: 21px;
+		}
+	}
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * Footer
+ */
+
+.dslca-enabled .site-footer {
+
+	background:#222222;
+	color: #999999;
+
+	text-transform: uppercase;
+	font-size: 11px;
+	font-family: "Open Sans";
+	font-weight: 900;
+
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 55px;
+}
+
+// On the footer editing page this content styling used to make some
+// empty space where the content normally goes
+.footer-editing__pseudo-content {
+	width: 70%;
+	margin: 100px auto;
+	text-align: center;
+	text-transform: uppercase;
+	color: rgb(172, 172, 172);
+	letter-spacing: 1px;
+
+	.dslca-activate-composer-hook {
+		position: relative;
+		right: auto;
+		bottom: auto;
+		display: inline-block;
+		float: none;
+	}
+}
+
+.single-lbmn_footer.dslca-enabled .site-content {
+	padding-bottom: 140px;
+}

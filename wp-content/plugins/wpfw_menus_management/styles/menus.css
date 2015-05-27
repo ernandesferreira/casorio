@@ -1,0 +1,5 @@
+.metabox-holder-disabled #wpfw-import-menu .accordion-section-content, 
+.metabox-holder-disabled #wpfw-import-menu .accordion-section-title, 
+.metabox-holder-disabled #wpfw-import-menu .postbox {
+	opacity: 1;
+}

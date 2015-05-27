@@ -1,0 +1,86 @@
+{
+   "dslc_sidebar":{
+      "newslettersignupwidget-2":{
+         "title":"Assine a nossa newsletter!",
+         "text_before_form":"",
+         "text_after_form":"",
+         "filter":false
+      },
+      "easy-social-share-fans-counter-2":{
+         "style":"colored",
+         "title":"Our Social Fans",
+         "cols":"3",
+         "width":"",
+         "box_only":null,
+         "tiny":null
+      }
+   },
+   "dslc_404_page_widgets":{
+      "recent-posts-5":{
+         "title":"Recent Posts",
+         "number":5,
+         "show_date":false
+      },
+      "tag_cloud-4":{
+         "title":"Tags",
+         "taxonomy":"post_tag"
+      },
+      "categories-5":{
+         "title":"",
+         "count":1,
+         "hierarchical":1,
+         "dropdown":0
+      }
+   },
+   "dslc_comment_form_area":{
+      "recent-posts-4":{
+         "title":"",
+         "number":3,
+         "show_date":true
+      },
+      "tag_cloud-2":{
+         "title":"All Website Tags",
+         "taxonomy":"post_tag"
+      }
+   },
+   "mobile-offcanvas":{
+      "search-3":{
+         "title":""
+      },
+      "nav_menu-10":{
+         "title":"Site content",
+         "nav_menu":TOREPLACE_OFFCANVAS_MENUID
+      },
+      "text-6":{
+         "title":"Contact us",
+         "text":"<h4>\r\n<i class=\"im-icon-bubble-5\" \r\nstyle=\"font-size:85%;\r\nmargin-right:10px;\r\nopacity:.5;\"><\/i> \r\n\r\n0 (877) 123-4567\r\n<\/h4>\r\n\r\n<h4>\r\n<a href=\"mailto:info@yoursite.com\">\r\n<i class=\"im-icon-envelop\"\r\nstyle=\"font-size:85%;\r\nmargin-right:10px;\r\nopacity:.5;\"><\/i> \r\n\r\ninfo@yoursite.com\r\n<\/a>\r\n<\/h4>",
+         "filter":false
+      },
+      "easy-social-share-fans-counter-3":{
+         "style":"metro",
+         "title":"Social Fans",
+         "cols":"2",
+         "width":"",
+         "box_only":"true",
+         "tiny":null
+      },
+      "newslettersignupwidget-3":{
+         "title":"Newsletter sign up",
+         "text_before_form":"",
+         "text_after_form":"",
+         "filter":false
+      },
+      "tag_cloud-3":{
+         "title":"",
+         "taxonomy":"post_tag"
+      }
+   },
+   "mmm_menu_widgets_area_1":{
+      "newslettersignupwidget-4":{
+         "title":"",
+         "text_before_form":"<p style=\"font-weight: 300; font-size: 19px; margin-top: 14px; margin-bottom: 40px;\">Every month we put together new guides, tips and e-books to help you drive more leads and increase revenue.<\/p>\r\n\r\n<p style=\"font-weight: 400; margin-bottom: 14px;\">Registe-se na nossa newsletter para obter novos e-books por e-mail:<\/p>",
+         "text_after_form":"<div style=\"height:220px;\"><\/div>",
+         "filter":false
+      }
+   }
+}

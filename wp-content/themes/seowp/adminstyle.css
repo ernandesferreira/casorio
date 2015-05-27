@@ -1,0 +1,386 @@
+/**
+ * Theme Name: SEOWP
+ * Styles used in the WP admin area for custom theme panels or some
+ * bundled plugin or WordPress UI elements style improvements
+ *
+ * ----------------------------------------------------------------------
+ * Quick setup guide on theme activation
+ */
+
+.lbmnadmin-icon-checkmark {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.lbmnadmin-icon-checkmark:before {
+	content: "\e000";
+}
+
+.lumberman-message {
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+	-moz-box-shadow:inset 0 0 35px rgba(0,0,0,0.005);
+	-webkit-box-shadow:inset 0 0 35px rgba(0,0,0,0.005);
+	box-shadow:inset 0 0 35px rgba(0,0,0,0.005);
+	background:#FFF url(./design/images/theme-installer-image.jpg) no-repeat -23% 60px!important;
+	-webkit-background-size: 40%!important;
+	background-size: 40%!important;
+
+	border:2px solid #43B5E7!important;
+	overflow:hidden;
+	margin-top: 15px!important;
+	padding:10px 0!important;
+	position:relative;
+	z-index:1;
+}
+
+.lumberman-message .message-container
+{
+	margin:0 auto;
+	max-width:960px;
+	overflow:hidden;
+	padding: 40px 10px  40px 30%;
+	text-align:left;
+}
+
+.lumberman-message .before-header {
+	margin-bottom: 20px;
+
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	color: #AFAFAF;
+}
+
+.lumberman-message  h4,
+.lumberman-message  h5
+{
+	color:#232627;
+	font-family: HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",sans-serif;
+	margin:5px 10px 5px 0;
+	vertical-align:middle;
+
+	font-weight: 200;
+	font-size: 26px;
+	line-height:  1.125;
+}
+
+.lumberman-message h5 {
+	font-size: 16px;
+	line-height: 1.2;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.lumberman-message .submit {
+	margin: 0;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.lumberman-message .step {
+	position: absolute;
+	font-size: 19px;
+	line-height: 19px;
+	float: left;
+	display: inline-block;
+	font-weight: 200;
+	margin-right: 20px;
+	margin-top: 2px;
+	border: 1px solid #EEE;
+	border-radius: 200px;
+	padding: 6px;
+
+	min-width: 19px;
+	text-align: center;
+}
+
+.lumberman-message .submit .customspinner {
+	position: absolute;
+	top: 10px;
+	left: 8px;
+	display: none;
+}
+
+.lumberman-message .submit.loading .number {
+	opacity: 0;
+}
+
+.lumberman-message .submit.loading .customspinner {
+	display: block;
+}
+
+.lumberman-message .error {
+	display: inline-block;
+	padding: 4px 10px;
+	background: rgba(255, 0, 0, 0.09);
+	border-radius: 3px;
+	margin-top: 10px;
+	margin-left: 50px;
+	border: solid 1px #FCB6AC;
+}
+
+/* Special design for completed steps */
+
+.lumberman-message .step-completed .step {
+	background: #43B5E7;
+	border-color: #43B5E7;
+	color: #FFF;
+}
+
+.lumberman-message .step-completed .step .number {
+	display: none;
+}
+
+.lumberman-message .step-completed .step:after {
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	content: "✓";
+}
+
+.lumberman-message .step-completed .step-body {
+	opacity: .4;
+}
+
+.lumberman-message .step-body {
+	margin-left: 50px;
+	display: inline-block;
+}
+
+.lumberman-message .step-description {
+	display: inline-block;
+	max-width: 300px;
+	margin-top: -4px;
+}
+
+.lumberman-message .button {
+	font-size: 14px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-right: 20px;
+	/*margin-bottom: 10px;*/
+	line-height: 32px!important;
+	height: 35px;
+
+	vertical-align: top!important;
+	text-decoration: none!important;
+
+	min-width: 200px;
+	text-align: center;
+}
+
+.lumberman-message .action-skip {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.lumberman-message .skip.button-primary {
+	opacity: .75;
+	background: #FFF;
+	border-color: #D3D3D3;
+	color: #9DA3A5;
+	text-shadow: none;
+	box-shadow: none;
+
+	font-size: 12px;
+	height: 30px;
+	line-height: 30px!important;
+}
+
+@media screen and (min-width: 1700px) {
+	.lumberman-message {
+		background-position: -15% 60px!important;
+	}
+}
+
+.error-log-window {
+    background: none repeat scroll 0 0 rgb(255, 255, 255);
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 3px;
+    margin-bottom: 40px;
+    padding: 40px;
+}
+
+/**
+* ----------------------------------------------------------------------
+* Styles for meta boxes
+*/
+
+body .rwmb-field {
+	margin: 1.5em  0.25em;
+}
+
+body .rwmb-divider-wrapper {
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+body .rwmb-divider-wrapper hr {
+	border-bottom: 1px solid #fff;
+}
+
+body .rwmb-label {
+	margin: 0 0 .75em;
+}
+
+body .rwmb-radio-wrapper label {
+	margin-right: 0.75em;
+}
+
+body .rwmb-input input {
+	max-width: 100%;
+	margin-right: 4px;
+}
+
+/* ------------------- */
+/* Import progress bar */
+
+.import-progress {
+	display: block;
+border: 1px solid #eee;
+width: 198px;
+margin-left:50px;
+margin-top:8px;
+border-radius: 3px;
+position: absolute;
+overflow: hidden;
+opacity: 0;
+}
+
+.progress-indicator {
+height:4px;
+width:0%;
+display: block;
+line-height: 4px;
+background: #aaa;
+}
+
+
+/**
+* ----------------------------------------------------------------------
+* TGM plugin activation page improvements
+*/
+
+/* Warning table row for not installed plugins */
+#tgmpa-plugins .plugins .required.notinstalled th,
+#tgmpa-plugins .plugins .required.notinstalled td {
+	background-color: #FEF7F7;
+
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.1);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+#tgmpa-plugins .plugins .required.notinstalled th.check-column {
+	border-left: 4px solid #D54E21;
+}
+
+/* Warning table row for not updated plugins */
+#tgmpa-plugins .plugins .update th,
+#tgmpa-plugins .plugins .update td {
+	background-color: #FDFAF0;
+
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.1);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+
+#tgmpa-plugins .plugins .required.notinstalled .status,
+#tgmpa-plugins .plugins .update .status {
+	padding-top: 16px;
+}
+
+#tgmpa-plugins .status .button {
+	margin-top: -3px;
+	margin-left: 20px;
+	color: #fff!important;
+}
+
+#tgmpa-plugins .plugins .update th.check-column {
+	border-left: 4px solid #F8C75E;
+}
+
+#tgmpa-plugins .plugins .row-actions {
+	visibility: visible;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * Clean Mega Main Menu plugin from unneeded setting panels
+ */
+
+.mm_theme_options_form .mega_main_menu_optionstopbar_menu_options,
+.mm_theme_options_form .mega_main_menu_optionsheader-menu_menu_options,
+.mm_theme_options_form div[class*="mega_menu_logo"],
+.mm_theme_options_form .logo_src,
+.mm_theme_options_form .logo_height,
+.mm_theme_options_form .mega_main_menu_optionstopbar_menu_skin,
+.mm_theme_options_form .mega_main_menu_optionsheader-menu_menu_skin,
+.mm_theme_options_form .indefinite_location_mode,
+.mm_theme_options_form .coercive_styles,
+.mm_theme_options_form .menu_item a[href="#support"] /* support tab */
+ {
+	display: none;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * Menu page improvements
+ * Add content type name to the categories panels
+ */
+
+/* hide LC custom content types category panels by default */
+
+.nav-menus-php #add-dslc_staff_cats,
+.nav-menus-php #add-dslc_galleries_cats,
+.nav-menus-php #add-dslc_projects_cats,
+.nav-menus-php #add-dslc_downloads_tags,
+.nav-menus-php #add-dslc_downloads_cats,
+.nav-menus-php #add-dslc_testimonials_cats,
+.nav-menus-php #add-dslc_partners_cats,
+
+.nav-menus-php #add-dslc_templates,
+.nav-menus-php #add-dslc_projects,
+.nav-menus-php #add-dslc_galleries,
+.nav-menus-php #add-dslc_staff,
+.nav-menus-php #add-dslc_downloads,
+.nav-menus-php #add-dslc_testimonials,
+.nav-menus-php #add-dslc_partners
+{
+	display: none;
+}
+
+
+/**
+ * ----------------------------------------------------------------------
+ * SVG images WordPress bug
+ */
+
+img[src*=".svg"] {
+	width: auto;
+	height: auto;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * Fix admin bar on mobile
+ */
+
+ .wp-admin #wpadminbar {
+	 top:0;
+ }

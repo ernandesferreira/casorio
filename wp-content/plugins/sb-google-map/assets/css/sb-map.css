@@ -1,0 +1,7 @@
+/* Map style */
+/* version 1.0 */
+
+.sb-map { max-width:100%; }
+.sb-map img { box-shadow:none; border-radius:0; max-width:none; }
+.sb-map .sb-marker { display:none; }
+.gm-style .gm-style-iw { width:auto !important; }

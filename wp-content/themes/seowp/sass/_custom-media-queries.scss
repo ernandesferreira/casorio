@@ -1,0 +1,94 @@
+/*! lbmn: Custom Media Queries */
+
+/**
+* ----------------------------------------------------------------------
+* Retina Devices
+* @link http://stackoverflow.com/questions/16459358/media-queries-on-retina-enabled-devices
+*/
+
+// hide for non-retina by default
+
+.show-for-retina {
+  display: none;
+}
+
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi) {
+
+  .show-for-retina {
+    display: inline-block;
+  }
+
+  .hide-for-retina {
+    display: none;
+  }
+
+}
+
+/**
+* ----------------------------------------------------------------------
+* LiveComposer Responsive Grid
+*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+	.dslc-modules-section-wrapper, .dslc-add-modules-section {
+	    width: 940px !important;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.dslc-modules-section-wrapper, .dslc-add-modules-section {
+	    width: 688px !important; //748px !important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.dslc-modules-section-wrapper, .dslc-add-modules-section {
+	    width: 420px !important;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.dslc-modules-section-wrapper, .dslc-add-modules-section {
+		width: 280px !important;
+	}
+}
+
+
+/**
+ * ----------------------------------------------------------------------
+ * Make responsive editing mode in LiveComposer looks native
+ */
+
+
+body.dslca-enabled.dslc-res-phone {
+
+	// re-size wrapper to the size of mobile
+	.global-wrapper {
+		max-width: 320px;
+	}
+
+	// hide top bar
+	#mega_main_menu.topbar {
+		display: none;
+	}
+
+	// simplify main menu
+	#mega_main_menu.header-menu {
+		.mega_main_menu_ul {
+			display: none;
+		}
+	}
+
+
+	.dslc-modules-section-wrapper,
+	.dslc-add-modules-section {
+		width: 280px !important;
+	}
+}
+

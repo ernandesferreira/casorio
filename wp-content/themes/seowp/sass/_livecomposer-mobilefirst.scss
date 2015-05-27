@@ -1,0 +1,62 @@
+/*!
+ * LiveComposer Components styling override
+ * Mobile First (applied to mobile and desktop)
+ */
+
+
+	// Disable on hover animation for some LC interface elements
+	// .dslca-module-manage-inner {
+	// 	top: 0!important;
+	// 	opacity: 0;
+	// }
+
+	// .dslca-enabled .dslc-module-front:hover .dslca-module-manage-inner {
+	// 	opacity: 1;
+	// }
+
+// Improve testimonials responsive presentation
+body.dslc-res-phone #dslc-content .dslc-testimonial-author.dslc-testimonial-author-pos-outside-right {
+	float: none;
+}
+
+body.dslc-res-phone .dslc-no-columns-spacing .dslc-col {
+    margin: 0;
+}
+
+body {
+	// .dslca-add-modules-section {
+	// 	margin-bottom: 130px;
+	// }
+
+	// Fix broken InfoBox layout in some cases
+	.dslc-module-DSLC_Info_Box:after {
+	   clear: both;
+	   content: "";
+	   display: table;
+	}
+
+	.dslc-accordion-header,
+	#dslc-content .dslc-cpt-post-title h2,
+	#dslc-content .dslc-blog-post-title h2,
+	#dslc-content .dslc-gallery-title h2,
+	#dslc-content .dslc-partner .dslc-partner-title h2,
+	#dslc-content .dslc-projects .dslc-project-title h2,
+	#dslc-content .dslc-product-title h2,
+	#dslc-content .dslc-staff-member-title h2,
+	#dslc-content .dslc-module-heading h2,
+	#dslc-content .dslc-product-thumb .dslc-product-price,
+	#dslc-content .dslc-product-price-secondary,
+	#dslc-content .dslc-projects .dslc-project-cats,
+	#dslc-content .dslc-gallery-images-count-num,
+	#dslc-content .dslc-gallery-images-count-txt,
+	#dslc-content .dslc-partner .dslc-partner-excerpt {
+		font-family: inherit;
+	}
+
+
+	#dslc-content .dslc-partner .dslc-partner-thumb {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}

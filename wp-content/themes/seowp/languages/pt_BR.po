@@ -1,0 +1,1366 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SEO WP Theme\n"
+"POT-Creation-Date: 2014-08-27 00:32+0200\n"
+"PO-Revision-Date: 2014-12-09 17:14-0300\n"
+"Last-Translator: Tfingi <support@tfingi.com>\n"
+"Language-Team: Lumberman Designs <support@lumberman.co.uk>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_nx\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../content.php:39 ../inc/plugins-integration/livecomposer.php:1250
+#: ../single-lbmn_footer.php:77
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: ../functions.php:124
+msgid "Top Bar"
+msgstr "Barra superior"
+
+#: ../functions.php:125
+msgid "Header"
+msgstr "Cabeçalho"
+
+#: ../functions.php:306 ../inc/plugins-integration/class-tgmpa.php:196
+msgid "Install Required Plugins"
+msgstr "Instale os Plugins Obrigatórios"
+
+#: ../functions.php:307 ../inc/plugins-integration/class-tgmpa.php:197
+msgid "Install Plugins"
+msgstr "Instale Plugins"
+
+#: ../functions.php:308 ../inc/plugins-integration/class-tgmpa.php:198
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instalando Plugins: %s"
+
+#: ../functions.php:309
+msgid "Something went wrong with the plugin API."
+msgstr "Algo deu errado com a API do plugin."
+
+#: ../functions.php:320 ../inc/plugins-integration/class-tgmpa.php:211
+msgid "Return to Required Plugins Installer"
+msgstr "Retornar para os plugins necessários."
+
+#: ../functions.php:321 ../inc/plugins-integration/class-tgmpa.php:213
+#: ../inc/plugins-integration/class-tgmpa.php:2050
+msgid "Plugin activated successfully."
+msgstr "Plugin ativado com sucesso."
+
+#: ../functions.php:322
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Todos os plugins instalado e ativado com sucesso. %s"
+
+#: ../inc/customizer/customizer.php:1191
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Select &mdash;"
+
+#: ../inc/customizer/customizer.php:1408
+msgid "Open Library"
+msgstr "Open Library"
+
+#: ../inc/customizer/customizer.php:1450
+msgid "Media Library"
+msgstr "Biblioteca de mídia"
+
+#: ../inc/customizer/customizer.php:1556 ../inc/customizer/customizer.php:1566
+msgid "Small"
+msgstr "Pequeno"
+
+#: ../inc/customizer/customizer.php:1557 ../inc/customizer/customizer.php:1567
+msgid "Medium"
+msgstr "Médio"
+
+#: ../inc/customizer/customizer.php:1558 ../inc/customizer/customizer.php:1568
+msgid "Large"
+msgstr "Grande"
+
+#: ../inc/customizer/customizer.php:1560
+msgid "UPPERCASE: SMALL"
+msgstr "MAIÚSCULAS: PEQUENA"
+
+#: ../inc/customizer/customizer.php:1561
+msgid "UPPERCASE: MEDIUM"
+msgstr "MAIÚSCULAS: MÉDIA"
+
+#: ../inc/customizer/customizer.php:1562
+msgid "UPPERCASE: LARGE"
+msgstr "MAIÚSCULAS: GRANDE"
+
+#: ../inc/customizer/customizer.php:1759
+msgid "Top panel:"
+msgstr "Painel superior:"
+
+#: ../inc/customizer/customizer.php:1760 ../inc/customizer/customizer.php:1764
+#: ../inc/customizer/customizer.php:1768
+msgid "&mdash; Left"
+msgstr "&mdash; Esquerda"
+
+#: ../inc/customizer/customizer.php:1761 ../inc/customizer/customizer.php:1765
+#: ../inc/customizer/customizer.php:1769
+msgid "&mdash; Right"
+msgstr "&mdash; Direita"
+
+#: ../inc/customizer/customizer.php:1763
+msgid "Header top:"
+msgstr "Cabeçalho superior:"
+
+#: ../inc/customizer/customizer.php:1767
+msgid "Header bottom:"
+msgstr "Cabeçalho Inferior:"
+
+#: ../inc/customizer/customizer.php:1999
+msgid "Disable"
+msgstr "Desativar"
+
+#: ../inc/functions-extras.php:164
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+#: ../inc/functions-ini.php:260
+msgid "Mobile: Off-canvas Panel"
+msgstr "Telemóvel: Painel Off-canvas"
+
+#: ../inc/functions-nopluginsinstalled.php:95
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Posts Antigos"
+
+#: ../inc/functions-nopluginsinstalled.php:99
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Recentes <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../inc/importer/parsers.php:48 ../inc/importer/parsers.php:80
+#: ../inc/importer/parsers.php:88
+msgid "There was an error when reading this WXR file"
+msgstr "Houve um erro ao ler este arquivo WXR"
+
+#: ../inc/importer/parsers.php:49
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+"Detalhes exibidos acima. O importador vai agora tentar novamente com um "
+"analisador diferente..."
+
+#: ../inc/importer/parsers.php:92 ../inc/importer/parsers.php:97
+#: ../inc/importer/parsers.php:287 ../inc/importer/parsers.php:476
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr "Este não parece ser um arquivo WXR, versão do WXR faltando ou inválida"
+
+#: ../inc/importer/widgets-importer.php:27
+msgid "Import file could not be found. Please try again."
+msgstr "Importar arquivo não pôde ser encontrado. Por favor, tente novamente."
+
+#: ../inc/importer/widgets-importer.php:46
+msgid "Import data could not be read. Please try a different file."
+msgstr ""
+"Os dados importados não podem ser lidos. Por favor, tente um arquivo "
+"diferente."
+
+#: ../inc/importer/widgets-importer.php:84
+msgid "Sidebar does not exist in theme (using Inactive)"
+msgstr "Sidebar não existe no tema (usando Inativo)"
+
+#: ../inc/importer/widgets-importer.php:106
+msgid "Site does not support widget"
+msgstr "Site não suporta Widget"
+
+#: ../inc/importer/widgets-importer.php:126
+msgid "Widget already exists"
+msgstr "Widget já existe"
+
+#: ../inc/importer/widgets-importer.php:175
+msgid "Imported"
+msgstr "Importado"
+
+#: ../inc/importer/widgets-importer.php:178
+msgid "Imported to Inactive"
+msgstr "Importado para Inativo"
+
+#: ../inc/importer/widgets-importer.php:185
+#, fuzzy
+msgid "No Title"
+msgstr "Sem Título"
+
+#: ../inc/importer/wordpress-importer.php:134
+#: ../inc/importer/wordpress-importer.php:143
+#: ../inc/importer/wordpress-importer.php:194
+#: ../inc/importer/wordpress-importer.php:198
+#: ../inc/importer/wordpress-importer.php:207
+msgid "Sorry, there has been an error."
+msgstr "Desculpe, houve um erro."
+
+#: ../inc/importer/wordpress-importer.php:135
+msgid "The file does not exist, please try again."
+msgstr "O arquivo não existe, por favor tente novamente."
+
+#: ../inc/importer/wordpress-importer.php:178
+msgid "All done."
+msgstr "Pronto! "
+
+#: ../inc/importer/wordpress-importer.php:178
+msgid "Have fun!"
+msgstr "Divirta-se"
+
+#: ../inc/importer/wordpress-importer.php:179
+msgid "Remember to update the passwords and roles of imported users."
+msgstr "Lembre-se de atualizar as senhas e os papéis dos usuários importados."
+
+#: ../inc/importer/wordpress-importer.php:199
+#, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+"O arquivo de exportação não pode ser encontrado em <code>%s</code>. É "
+"provável que isso tenha sido causado por um problema de permissões."
+
+#: ../inc/importer/wordpress-importer.php:215
+#, php-format
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+"Este arquivo WXR (version %s) pode não ser suportado por esta versão do "
+"importador. Por favor, considere atualizar."
+
+#: ../inc/importer/wordpress-importer.php:240
+#, php-format
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+"Falha ao importar o autor %s. Suas postagens serão atribuídas ao usuário "
+"atual."
+
+#: ../inc/importer/wordpress-importer.php:266
+msgid "Assign Authors"
+msgstr "Atribuir Autores"
+
+#: ../inc/importer/wordpress-importer.php:267
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>admin</"
+"code>s entries."
+msgstr ""
+"Para tornar mais fácil para você editar e salvar o conteúdo importado, você "
+"pode querer transferir o autor do item importado para um usuário existente "
+"deste site. Por exemplo, você pode querer importar todas as entradas como "
+"entradas de <code>admin</code>."
+
+#: ../inc/importer/wordpress-importer.php:269
+#, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+"Se um novo usuário é criado pelo WordPress, uma nova senha será gerada "
+"aleatoriamente e o perfil do novo usuário será definido como %s. Será "
+"necessário alterar manualmente os detalhes do novo usuário."
+
+#: ../inc/importer/wordpress-importer.php:279
+msgid "Import Attachments"
+msgstr "Importação de Anexos"
+
+#: ../inc/importer/wordpress-importer.php:282
+msgid "Download and import file attachments"
+msgstr "Faça o download e importe arquivos anexados"
+
+#: ../inc/importer/wordpress-importer.php:299
+msgid "Import author:"
+msgstr "Importar autor:"
+
+#: ../inc/importer/wordpress-importer.php:310
+msgid "or create new user with login name:"
+msgstr "ou criar novo usuário com o nome de login:"
+
+#: ../inc/importer/wordpress-importer.php:313
+msgid "as a new user:"
+msgstr "como um novo usuário:"
+
+#: ../inc/importer/wordpress-importer.php:321
+msgid "assign posts to an existing user:"
+msgstr "atribuir mensagens para um usuário existente:"
+
+#: ../inc/importer/wordpress-importer.php:323
+msgid "or assign posts to an existing user:"
+msgstr "ou atribuir mensagens para um usuário existente:"
+
+#: ../inc/importer/wordpress-importer.php:324
+msgid "- Select -"
+msgstr "- Selecionar -"
+
+#: ../inc/importer/wordpress-importer.php:374
+#, php-format
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+"Falha ao criar novo usuário para %s. Suas postagens serão atribuídas ao "
+"usuário atual."
+
+#: ../inc/importer/wordpress-importer.php:425
+#, php-format
+msgid "Failed to import category %s"
+msgstr "Falha ao importar categoria %s"
+
+#: ../inc/importer/wordpress-importer.php:465
+#, php-format
+msgid "Failed to import post tag %s"
+msgstr "Falha ao importar tag do post %s"
+
+#: ../inc/importer/wordpress-importer.php:511
+#: ../inc/importer/wordpress-importer.php:656
+#, php-format
+msgid "Failed to import %s %s"
+msgstr "Falha ao importar %s %s"
+
+#: ../inc/importer/wordpress-importer.php:541
+#, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+
+#: ../inc/importer/wordpress-importer.php:563
+#, php-format
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr "%s &#8220;%s&#8221; already exists."
+
+#: ../inc/importer/wordpress-importer.php:622
+#, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr "Failed to import %s &#8220;%s&#8221;"
+
+#: ../inc/importer/wordpress-importer.php:787
+msgid "Menu item skipped due to missing menu slug"
+msgstr "Menu item skipped due to missing menu slug"
+
+#: ../inc/importer/wordpress-importer.php:794
+#, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr "Menu item skipped due to invalid menu slug: %s"
+
+#: ../inc/importer/wordpress-importer.php:857
+msgid "Fetching attachments is not enabled"
+msgstr "Obtenção de anexos não está ativada"
+
+#: ../inc/importer/wordpress-importer.php:870
+msgid "Invalid file type"
+msgstr "Tipo de arquivo inválido"
+
+#: ../inc/importer/wordpress-importer.php:914
+msgid "Remote server did not respond"
+msgstr "O servidor remoto não respondeu"
+
+#: ../inc/importer/wordpress-importer.php:920
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr "Remote server returned error response %1$d %2$s"
+
+#: ../inc/importer/wordpress-importer.php:927
+msgid "Remote file is incorrect size"
+msgstr "Tamanho do arquivo remoto incorreto"
+
+#: ../inc/importer/wordpress-importer.php:932
+msgid "Zero size file downloaded"
+msgstr "Tamanho do arquivo baixado: Zero"
+
+#: ../inc/importer/wordpress-importer.php:938
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr "Remote file is too large, limit is %s"
+
+#: ../inc/importer/wordpress-importer.php:1037
+msgid "Import WordPress"
+msgstr "Importação do WordPress"
+
+#: ../inc/importer/wordpress-importer.php:1044
+#, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+"A nova versão deste importador está disponível. Por favor, atualize para a "
+"versão %s para garantir a compatibilidade com os arquivos de exportação mais "
+"recentes."
+
+#: ../inc/importer/wordpress-importer.php:1059
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+"Oi! Envie seu o seu arquivo WordPress eXtended RSS (WXR) e vamos importar os "
+"posts, páginas de comentários, campos personalizados, categorias e tags para "
+"este site."
+
+#: ../inc/importer/wordpress-importer.php:1060
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+"Escolha um arquivo WXR (.xml) para fazer o upload e clique em Enviar arquivo."
+
+#: ../inc/plugins-integration/class-tgmpa.php:199
+msgid "Something went wrong."
+msgstr "Algo deu errado."
+
+#: ../inc/plugins-integration/class-tgmpa.php:212
+msgid "Return to the dashboard"
+msgstr "Voltar ao Painel"
+
+#: ../inc/plugins-integration/class-tgmpa.php:214
+msgid "The following plugin was activated successfully:"
+msgstr "O seguinte plugin foi ativado com sucesso:"
+
+#: ../inc/plugins-integration/class-tgmpa.php:215
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
+
+#: ../inc/plugins-integration/class-tgmpa.php:216
+msgid "Dismiss this notice"
+msgstr "Ignorar este aviso"
+
+#: ../inc/plugins-integration/class-tgmpa.php:579
+#: ../inc/plugins-integration/class-tgmpa.php:2283
+msgid "Return to Themes"
+msgstr "Retornar para Temas"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1226
+msgid "Private Repository"
+msgstr "Repositório Privado"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1229
+msgid "Pre-Packaged"
+msgstr "Pré-compactado"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1234
+msgid "WordPress Repository"
+msgstr "Repositório WordPress"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1237
+msgid "Required"
+msgstr "Necessário"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1237
+msgid "Recommended"
+msgstr "Recomendado"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1240
+msgid "Not Installed"
+msgstr "Não Instalado"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1242
+msgid "Installed But Not Activated"
+msgstr "Instalado, mas não ativado"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1244
+msgid "Not Updated"
+msgstr "Não Atualizado"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1246
+msgid "Active"
+msgstr "Ativo"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1347
+#: ../inc/plugins-integration/class-tgmpa.php:1478
+msgid "Install"
+msgstr "Instalar"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1369
+#: ../inc/plugins-integration/class-tgmpa.php:1479
+msgid "Activate"
+msgstr "Ativar"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1441
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1457
+msgid "Plugin"
+msgstr "Plugin"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1458
+msgid "Source"
+msgstr "Fonte"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1459
+#: ../inc/plugins-integration/livecomposer-archive.php:285
+msgid "Type"
+msgstr "Tipo"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1460
+msgid "Status"
+msgstr "Estado"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1480
+msgid "Update"
+msgstr "Atualizar"
+
+#: ../inc/plugins-integration/class-tgmpa.php:1590
+msgid "No plugins are available to be installed at this time."
+msgstr "Nenhum plug-in está disponível para ser instalado nesse momento."
+
+#: ../inc/plugins-integration/class-tgmpa.php:1699
+msgid "No plugins are available to be activated at this time."
+msgstr "Não há plugins disponíveis para ser ativado no momento."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2033
+msgid "Install package not available."
+msgstr "Pacote não disponível."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2034
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+
+#: ../inc/plugins-integration/class-tgmpa.php:2035
+msgid "Unpacking the package&#8230;"
+msgstr "Unpacking the package&#8230;"
+
+#: ../inc/plugins-integration/class-tgmpa.php:2036
+msgid "Installing the plugin&#8230;"
+msgstr "Installing the plugin&#8230;"
+
+#: ../inc/plugins-integration/class-tgmpa.php:2037
+msgid "Plugin install failed."
+msgstr "A Instalação do plugin falhou."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2038
+msgid "Plugin installed successfully."
+msgstr "Plugin instalado com sucesso."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2049
+msgid "Plugin activation failed."
+msgstr "Ativação do plugin falhou."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2163
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"O processo de instalação e ativação está começando. Este processo pode "
+"demorar um pouco em alguns provedores, por favor seja paciente."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2164
+#: ../inc/plugins-integration/class-tgmpa.php:2172
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Ocorreu um erro durante a instalação %1$s : <strong> %2$s </strong>."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2165
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s instalado e ativado com sucesso."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2165
+#: ../inc/plugins-integration/class-tgmpa.php:2174
+msgid "Show Details"
+msgstr "Mostrar Detalhes"
+
+#: ../inc/plugins-integration/class-tgmpa.php:2165
+#: ../inc/plugins-integration/class-tgmpa.php:2174
+msgid "Hide Details"
+msgstr "Ocultar Detalhes"
+
+#: ../inc/plugins-integration/class-tgmpa.php:2166
+msgid "All installations and activations have been completed."
+msgstr "Todas as instalações e ativações foram concluídas."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2167
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+
+#: ../inc/plugins-integration/class-tgmpa.php:2171
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"O processo de instalação foi iniciado. Este processo pode demorar um pouco "
+"em alguns servidores, por favor seja paciente."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2173
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "A instalação de %1$s falhou."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2174
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s instalado com sucesso."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2175
+msgid "All installations have been completed."
+msgstr "Todas as instalações foram completadas."
+
+#: ../inc/plugins-integration/class-tgmpa.php:2176
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando Plugin %1$s (%2$d/%3$d"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:66
+msgid "All Templates"
+msgstr "Todos os modelos"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:67
+msgid "View Template"
+msgstr "Ver Template"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:68
+msgid "Add New Template"
+msgstr "Adicionar Novo Modelo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:69
+msgid "Add Template"
+msgstr "Adicionar Template"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:70
+msgid "Edit Template"
+msgstr "Editar Modelo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:71
+msgid "Update Template"
+msgstr "Template Atualização"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:73
+#: ../inc/plugins-integration/livecomposer-footer.php:59
+msgid "Not found"
+msgstr "Não encontrado"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:74
+#: ../inc/plugins-integration/livecomposer-footer.php:60
+msgid "Not found in Trash"
+msgstr "Não encontrado na Lixeira"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:77
+#, fuzzy
+msgid "lbmn_archive"
+msgstr "lbmn_archive"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:278
+msgid "Post Type"
+msgstr "Tipo de Post"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:291
+msgid "Grid"
+msgstr "Grade"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:295
+msgid "Masonry Grid"
+msgstr "Grade"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:299
+msgid "Carousel"
+msgstr "Carrossel"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:305
+msgid "Orientation"
+msgstr "Orientação da página"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:311
+msgid "Vertical"
+msgstr "Vertical"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:315
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:347
+msgid "Posts Per Row"
+msgstr "Posts por Linha"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:354
+msgid "Order By"
+msgstr "Ordenar Por"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:360
+msgid "Publish Date"
+msgstr "Data de Publicação"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:364
+msgid "Modified Date"
+msgstr "Data de Modificação"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:368
+msgid "Random"
+msgstr "Aleatório"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:372
+msgid "Alphabetic"
+msgstr "Alfabético"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:376
+#, fuzzy
+msgid "Comment Count"
+msgstr "Contagem de Comentário"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:382
+msgid "Order"
+msgstr "Pedido"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:388
+msgid "Ascending"
+msgstr "Crescente"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:392
+msgid "Descending"
+msgstr "Decrescente"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:398
+msgid "Offset"
+msgstr "Compensar"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:407
+msgid "Elements"
+msgstr "Elementos"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:413
+msgid "Heading"
+msgstr "Título"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:417
+msgid "Filters"
+msgstr "Filtros"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:425
+msgid "Post Elements"
+msgstr "Elementos de Post"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:431
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:435
+msgid "Title"
+msgstr "Título"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:439
+msgid "Meta"
+msgstr "Meta"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:443
+#: ../inc/plugins-integration/livecomposer-archive.php:1350
+msgid "Excerpt"
+msgstr "Resumo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:447
+msgid "Button"
+msgstr "Botão"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:455
+msgid "Carousel Elements"
+msgstr "Elementos de Carrossel"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:461
+msgid "Arrows"
+msgstr "Setas"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:465
+msgid "Circles"
+msgstr "Círculos"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:477
+#: ../inc/plugins-integration/livecomposer-archive.php:673
+#: ../inc/plugins-integration/livecomposer-archive.php:1456
+msgid "BG Color"
+msgstr "Cor de Fundo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:487
+#: ../inc/plugins-integration/livecomposer-archive.php:684
+#: ../inc/plugins-integration/livecomposer-archive.php:885
+#: ../inc/plugins-integration/livecomposer-archive.php:1179
+#: ../inc/plugins-integration/livecomposer-archive.php:1519
+msgid "Border Color"
+msgstr "Cor da Borda"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:497
+#: ../inc/plugins-integration/livecomposer-archive.php:695
+#: ../inc/plugins-integration/livecomposer-archive.php:896
+#: ../inc/plugins-integration/livecomposer-archive.php:1190
+#: ../inc/plugins-integration/livecomposer-archive.php:1478
+msgid "Border Width"
+msgstr "Largura da borda"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:508
+#: ../inc/plugins-integration/livecomposer-archive.php:707
+#: ../inc/plugins-integration/livecomposer-archive.php:908
+#: ../inc/plugins-integration/livecomposer-archive.php:1202
+#: ../inc/plugins-integration/livecomposer-archive.php:1490
+msgid "Borders"
+msgstr "Bordas"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:514
+#: ../inc/plugins-integration/livecomposer-archive.php:713
+#: ../inc/plugins-integration/livecomposer-archive.php:914
+#: ../inc/plugins-integration/livecomposer-archive.php:1208
+#: ../inc/plugins-integration/livecomposer-archive.php:1496
+msgid "Top"
+msgstr "Topo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:518
+#: ../inc/plugins-integration/livecomposer-archive.php:717
+#: ../inc/plugins-integration/livecomposer-archive.php:918
+#: ../inc/plugins-integration/livecomposer-archive.php:1018
+#: ../inc/plugins-integration/livecomposer-archive.php:1212
+#: ../inc/plugins-integration/livecomposer-archive.php:1500
+msgid "Right"
+msgstr "Direita"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:522
+#: ../inc/plugins-integration/livecomposer-archive.php:721
+#: ../inc/plugins-integration/livecomposer-archive.php:922
+#: ../inc/plugins-integration/livecomposer-archive.php:1216
+#: ../inc/plugins-integration/livecomposer-archive.php:1504
+msgid "Bottom"
+msgstr "Inferior"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:526
+#: ../inc/plugins-integration/livecomposer-archive.php:725
+#: ../inc/plugins-integration/livecomposer-archive.php:926
+#: ../inc/plugins-integration/livecomposer-archive.php:1010
+#: ../inc/plugins-integration/livecomposer-archive.php:1220
+#: ../inc/plugins-integration/livecomposer-archive.php:1508
+msgid "Left"
+msgstr "Esquerda"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:536
+#: ../inc/plugins-integration/livecomposer-archive.php:736
+#: ../inc/plugins-integration/livecomposer-archive.php:937
+msgid "Border Radius - Top"
+msgstr "Border Radius - Top"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:547
+#: ../inc/plugins-integration/livecomposer-archive.php:748
+#: ../inc/plugins-integration/livecomposer-archive.php:949
+msgid "Border Radius - Bottom"
+msgstr "Border Radius - Botton"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:558
+#: ../inc/plugins-integration/livecomposer-archive.php:760
+#: ../inc/plugins-integration/livecomposer-archive.php:1162
+#: ../inc/plugins-integration/livecomposer-archive.php:1280
+#: ../inc/plugins-integration/livecomposer-archive.php:1423
+#: ../inc/plugins-integration/livecomposer-archive.php:1702
+#: ../inc/plugins-integration/livecomposer-archive.php:1991
+msgid "Margin Bottom"
+msgstr "Margem Inferior"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:569
+#: ../inc/plugins-integration/livecomposer-archive.php:784
+#: ../inc/plugins-integration/livecomposer-archive.php:961
+#: ../inc/plugins-integration/livecomposer-archive.php:1292
+#: ../inc/plugins-integration/livecomposer-archive.php:1613
+msgid "Padding Vertical"
+msgstr "Padding Vertical"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:580
+#: ../inc/plugins-integration/livecomposer-archive.php:796
+#: ../inc/plugins-integration/livecomposer-archive.php:973
+#: ../inc/plugins-integration/livecomposer-archive.php:1304
+#: ../inc/plugins-integration/livecomposer-archive.php:1625
+msgid "Padding Horizontal"
+msgstr "Padding Horizontal"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:596
+msgid "Enable/Disable"
+msgstr "Ativar / Desativar"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:602
+#: ../inc/plugins-integration/livecomposer-archive.php:1694
+#: ../inc/plugins-integration/livecomposer-archive.php:1983
+msgid "Enabled"
+msgstr "Ativado"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:606
+#: ../inc/plugins-integration/livecomposer-archive.php:1690
+#: ../inc/plugins-integration/livecomposer-archive.php:1979
+msgid "Disabled"
+msgstr "Desativado"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:614
+#: ../inc/plugins-integration/livecomposer-archive.php:1090
+#: ../inc/plugins-integration/livecomposer-archive.php:1231
+#: ../inc/plugins-integration/livecomposer-archive.php:1362
+#: ../inc/plugins-integration/livecomposer-archive.php:1553
+msgid "Color"
+msgstr "Cor"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:625
+msgid "Height"
+msgstr "Altura"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:639
+msgid "Style"
+msgstr "Estilo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:645
+msgid "Invisible"
+msgstr "Invisível"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:649
+msgid "Solid"
+msgstr "Sólido"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:653
+msgid "Dashed"
+msgstr "Tracejada"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:657
+msgid "Dotted"
+msgstr "Pontilhado"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:772
+msgid "Margin Right"
+msgstr "Margem Direita"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:808
+msgid "Resize - Height"
+msgstr "Redimensionar - Altura"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:816
+#: ../inc/plugins-integration/livecomposer-archive.php:824
+msgid "Resize - Width"
+msgstr "Redimensionar - Largura"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:833
+#: ../inc/plugins-integration/livecomposer-archive.php:1075
+msgid "Width"
+msgstr "Largura"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:852
+msgid "Location"
+msgstr "Localização"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:860
+msgid "Bellow Thumbnail"
+msgstr "Bellow Thumbnail"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:864
+msgid "Inside Thumbnail ( hover )"
+msgstr "Dentro Miniatura (pairar)"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:868
+msgid "Inside Thumbnail ( always visible )"
+msgstr "Dentro Miniatura (sempre visível)"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:874
+msgid " BG Color"
+msgstr " Cor de Fundo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:985
+msgid "Minimum Height"
+msgstr "Altura mínima"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:999
+msgid "Text Align"
+msgstr "Alinhamento de texto"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1014
+#: ../inc/plugins-integration/livecomposer-archive.php:1049
+msgid "Center"
+msgstr "Centro"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1022
+msgid "Justify"
+msgstr "Justificar"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1033
+msgid "Position"
+msgstr "Posição"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1041
+msgid "Top Left"
+msgstr "Topo Esquerda"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1045
+msgid "Top Right"
+msgstr "Superior direito"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1053
+msgid "Bottom Left"
+msgstr "Inferior esquerdo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1057
+msgid "Bottom Right"
+msgstr "Inferior Direito"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1063
+msgid "Margin"
+msgstr "Margem"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1101
+#: ../inc/plugins-integration/livecomposer-archive.php:1564
+msgid "Color - Hover"
+msgstr "Color - Hover"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1112
+#: ../inc/plugins-integration/livecomposer-archive.php:1242
+#: ../inc/plugins-integration/livecomposer-archive.php:1373
+#: ../inc/plugins-integration/livecomposer-archive.php:1575
+msgid "Font Size"
+msgstr "Tamanho da Fonte"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1124
+#: ../inc/plugins-integration/livecomposer-archive.php:1265
+#: ../inc/plugins-integration/livecomposer-archive.php:1385
+#: ../inc/plugins-integration/livecomposer-archive.php:1587
+msgid "Font Weight"
+msgstr "Largura da Fonte"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1139
+#: ../inc/plugins-integration/livecomposer-archive.php:1254
+#: ../inc/plugins-integration/livecomposer-archive.php:1400
+#: ../inc/plugins-integration/livecomposer-archive.php:1602
+msgid "Font Family"
+msgstr "Família de Fonte"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1150
+#: ../inc/plugins-integration/livecomposer-archive.php:1411
+msgid "Line Height"
+msgstr "Altura da Linha"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1317
+msgid "Link - Color"
+msgstr "Link - Cor"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1328
+msgid "Link - Hover - Color"
+msgstr "Link - Hover - Cor"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1344
+msgid "Excerpt or Content"
+msgstr "Trecho ou Conteúdo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1354
+msgid "Content"
+msgstr "Conteúdo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1435
+msgid "Max Length ( amount of words )"
+msgstr "Max Comprimento (quantidade de palavras)"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1448
+msgid "Text"
+msgstr "Texto"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1467
+msgid "BG Color - Hover"
+msgstr "BG Color - Hover"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1530
+msgid "Border Color - Hover"
+msgstr "Border Color - Hover"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1541
+msgid "Border Radius"
+msgstr "Border Radius"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1637
+msgid "Icon"
+msgstr " Ícone"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1645
+msgid "Icon - Color"
+msgstr "Ícone - Cor"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1656
+msgid "Icon - Hover - Color"
+msgstr "Ícone - Hover - Cor"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1667
+msgid "Icon - Margin Right"
+msgstr "Ícone - Margem direita"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1684
+#: ../inc/plugins-integration/livecomposer-archive.php:1973
+msgid "Responsive"
+msgstr "Responsivo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1714
+#: ../inc/plugins-integration/livecomposer-archive.php:2003
+msgid "Separator - Height"
+msgstr "Separador - Altura"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1728
+#: ../inc/plugins-integration/livecomposer-archive.php:2017
+msgid "Thumbnail - Margin Bottom"
+msgstr "Miniatura - Margem inferior"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1740
+#: ../inc/plugins-integration/livecomposer-archive.php:2029
+msgid "Thumbnail - Margin Right"
+msgstr "Miniatura - Margem direita"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1752
+#: ../inc/plugins-integration/livecomposer-archive.php:2041
+msgid "Thumbnail - Padding Vertical"
+msgstr "Miniatura - Padding Vertical"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1764
+#: ../inc/plugins-integration/livecomposer-archive.php:2053
+msgid "Thumbnail - Padding Horizontal"
+msgstr "Miniatura - Padding Horizontal"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1776
+#: ../inc/plugins-integration/livecomposer-archive.php:2065
+msgid "Main - Padding Vertical"
+msgstr "Main - Padding Vertical"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1788
+#: ../inc/plugins-integration/livecomposer-archive.php:2077
+msgid "Main - Padding Horizontal"
+msgstr "Main - Padding Horizontal"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1800
+#: ../inc/plugins-integration/livecomposer-archive.php:2089
+msgid "Title - Font Size"
+msgstr "Título - Tamanho da Fonte"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1812
+#: ../inc/plugins-integration/livecomposer-archive.php:2101
+msgid "Title - Line Height"
+msgstr "Título - Linha Altura"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1824
+#: ../inc/plugins-integration/livecomposer-archive.php:2113
+msgid "Title - Margin Bottom"
+msgstr "Título - Margem inferior"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1836
+#: ../inc/plugins-integration/livecomposer-archive.php:2125
+msgid "Meta - Font Size"
+msgstr "Meta - Tamanho da Fonte"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1848
+#: ../inc/plugins-integration/livecomposer-archive.php:2137
+msgid "Meta - Margin Bottom"
+msgstr "Meta - Margem inferior"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1860
+#: ../inc/plugins-integration/livecomposer-archive.php:2149
+msgid "Meta - Padding Vertical"
+msgstr "Meta - Preenchimento Vertical"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1872
+#: ../inc/plugins-integration/livecomposer-archive.php:2161
+msgid "Meta - Padding Horizontal"
+msgstr "Meta - Padding Horizontal"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1884
+#: ../inc/plugins-integration/livecomposer-archive.php:2173
+msgid "Excerpt - Font Size"
+msgstr "Trecho - Tamanho da Fonte"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1896
+#: ../inc/plugins-integration/livecomposer-archive.php:2185
+msgid "Excerpt - Line Height"
+msgstr "Resumo - Linha Altura"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1908
+#: ../inc/plugins-integration/livecomposer-archive.php:2197
+msgid "Excerpt - Margin Bottom"
+msgstr "Resumo - Margem inferior"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1920
+#: ../inc/plugins-integration/livecomposer-archive.php:2209
+msgid "Button - Font Size"
+msgstr "Button - Tamanho da Fonte"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1932
+#: ../inc/plugins-integration/livecomposer-archive.php:2221
+msgid "Button - Padding Vertical"
+msgstr "Button - Padding Vertical"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1944
+#: ../inc/plugins-integration/livecomposer-archive.php:2233
+msgid "Button - Padding Horizontal"
+msgstr "Button - Padding Horizontal"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:1956
+#: ../inc/plugins-integration/livecomposer-archive.php:2245
+msgid "Button - Icon - Margin Right"
+msgstr "Button - Ícone - Margem direita"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2500
+msgid "This heading will be automatically generated by a theme"
+msgstr "Esta posição será gerado automaticamente por um tema"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2503
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Arquivos por Categoria: %s"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2506
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Tópicos Publicações: %s"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2513
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Arquivos do Autor: %s"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2521
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Arquivos diários: %s"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2524
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Arquivos Mensais: %s"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2527
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Arquivos anuais: %s"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2530
+msgid "Asides"
+msgstr "Apartes"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2533
+msgid "Images"
+msgstr "Imagens"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2536
+msgid "Videos"
+msgstr "Vídeos"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2539
+msgid "Quotes"
+msgstr "Cotações"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2542
+msgid "Links"
+msgstr "Links"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2549
+msgid "You are searching for: "
+msgstr "Você está procurando: "
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2553
+msgid "There is one post that match your criteria..."
+msgstr "Há um post que correspondem aos seus critérios ..."
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2555
+#, php-format
+msgid "Here are %s posts that match your criteria..."
+msgstr "Aqui estão %s mensagens que correspondem aos seus critérios ..."
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2557
+msgid "Looks like nothing was found. Sorry."
+msgstr "Parece que nada foi encontrado. Desculpe."
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2564
+msgid "Archives"
+msgstr "Arquivo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2610
+msgid "All"
+msgstr "Tudo"
+
+#: ../inc/plugins-integration/livecomposer-archive.php:2739
+#: ../inc/plugins-integration/livecomposer-archive.php:2802
+msgid "By"
+msgstr "Por"
+
+#: ../inc/plugins-integration/livecomposer-footer.php:52
+msgid "All Footers"
+msgstr "Todos os rodapés"
+
+#: ../inc/plugins-integration/livecomposer-footer.php:53
+msgid "View Footer"
+msgstr "Ver Rodapé"
+
+#: ../inc/plugins-integration/livecomposer-footer.php:54
+msgid "Add New Footer"
+msgstr "Adicionar Novo Rodapé"
+
+#: ../inc/plugins-integration/livecomposer-footer.php:55
+msgid "Add Footer"
+msgstr "Adicionar Rodapé"
+
+#: ../inc/plugins-integration/livecomposer-footer.php:56
+msgid "Edit Footer"
+msgstr "Editar Rodapé"
+
+#: ../inc/plugins-integration/livecomposer-footer.php:57
+msgid "Update Footer"
+msgstr "Atualização de Rodapé"
+
+#: ../inc/plugins-integration/livecomposer-footer.php:63
+#, fuzzy
+msgid "lbmn_footer"
+msgstr "lbmn_footer"
+
+#: ../inc/plugins-integration/livecomposer.php:1274
+msgid "No Comments"
+msgstr "Sem comentários"
+
+#: ../inc/plugins-integration/livecomposer.php:1276
+msgid " Comments"
+msgstr " Comentários"
+
+#: ../inc/plugins-integration/livecomposer.php:1278
+msgid "1 Comment"
+msgstr "1 Comentário"
+
+#: ../inc/plugins-integration/metaboxes.php:49
+#, fuzzy
+msgid "Page Design Settings"
+msgstr "Página de configurações de projeto"
+
+#: ../inc/plugins-integration/metaboxes.php:71
+msgid "Menu cover content"
+msgstr "Conteúdo Menu cover"
+
+#: ../inc/plugins-integration/metaboxes.php:77
+msgid "Custom footer"
+msgstr "Footer personalizado"
+
+#: ../inc/plugins-integration/metaboxes.php:83
+msgid "Select an Item"
+msgstr "Selecione um Item"
+
+#~ msgid "Oops! That page can&rsquo;t be found."
+#~ msgstr "“”"
+
+#, fuzzy
+#~ msgid "Hide page title"
+#~ msgstr "“”"
+
+#, fuzzy
+#~ msgid "Secondary page title"
+#~ msgstr "“”"
+
+#, fuzzy
+#~ msgid "Post/Page IDs"
+#~ msgstr "“”"
+
+#~ msgid "LBMN Slider"
+#~ msgstr "“”"
+
+#, fuzzy
+#~ msgid "Section Slider"
+#~ msgstr "“”"
+
+#, fuzzy
+#~ msgid "Page background color"
+#~ msgstr "“”"

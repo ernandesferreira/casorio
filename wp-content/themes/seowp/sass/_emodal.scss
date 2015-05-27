@@ -1,0 +1,24 @@
+/**
+* ----------------------------------------------------------------------
+* EasyModal Plugin Modal Windows styling
+*/
+
+#modal-overlay {
+	background: rgba(0, 0, 0, .8)!important;
+}
+
+body .modal.theme-lumberman {
+	background: #FFF!important;
+	border: none!important;
+	padding: 40px 40px 20px!important;
+
+	.title {
+		padding: 0 20px 40px;
+		color: #000!important;
+	}
+
+	.close-modal {
+		color: #000!important;
+	}
+
+} // body .modal

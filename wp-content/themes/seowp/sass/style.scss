@@ -1,0 +1,1212 @@
+/*!
+Theme Name: SEOWP
+Theme URI: http://seowp.lumbermandesigns.com/
+Author: Lumberman Designs
+Author URI: http://themeforest.net/user/lumbermandesigns
+Description: SEOWP is a clean theme specially designed for Digital Marketing Agencies and their clients.
+Version: 1.6.1
+License: GNU General Public License
+License URI: http://themeforest.net/licenses
+Tags: white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, full-width-template, post-formats, theme-options, translation-ready
+*/
+
+
+
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+@import "normalize";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+@mixin icon-font {
+	font-family: 'iconfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+@mixin emptyPseudoElement {
+	position: absolute;
+	content: '';
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*:before,
+*:after {
+	@include box-sizing(border-box);
+}
+
+
+// if wpadmin panel activated
+body.admin-bar {
+	.fixed {
+		top: 28px;
+	}
+}
+
+body {
+	position: relative;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	@include border-radius(3px);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/**
+* ----------------------------------------------------------------------
+* Typography
+*/
+
+// body {
+//    line-height: $paragraph-line-height;
+// }
+
+// h1, h2 {
+//    font-weight: 100;
+// }
+
+/*
+@function emCalcWithBase($pxWidth, $pxBase) {
+	@return $pxWidth / $pxBase * 1em;
+}
+
+.h0 { font-size: $h0-font-size; }
+.h1 { font-size: $h1-font-size; }
+.h2 { font-size: $h2-font-size; }
+.h3 { font-size: $h3-font-size; }
+.h4 { font-size: $h4-font-size; }
+.h5 { font-size: $h5-font-size; font-weight: bolder; }
+.h6 { font-size: $h6-font-size; font-weight: bolder; }
+
+.h0, .h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: $header-line-height;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+}
+
+h5 {
+	font-weight: bolder;
+}
+
+h6 {
+	font-weight: bolder;
+}
+*/
+
+/* Typography resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+margin:0;
+padding:0;
+}
+
+a {
+	text-decoration: none;
+	line-height: inherit;
+
+	img { border:none; }
+}
+
+.larger {
+	font-size: 125%;
+	font-weight: 300;
+
+}
+
+.smaller {
+	font-size: 90%;
+}
+
+span.larger, span.smaller  {
+	display: inline-block; // line-height doesn't change without this
+}
+
+.lighter {
+	font-weight: lighter;
+}
+
+.light {
+	font-weight: 300;
+}
+
+.thin {
+	font-weight: 200;
+}
+
+.normal {
+	font-weight: normal;
+}
+
+.bolder {
+	font-weight: bolder;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.uppercase {
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+strong, b {
+	font-weight: bolder;
+}
+
+// p + h1,
+// p + h2,
+// p + h3,
+// p + h4,
+// p + h5,
+// p + h6 {
+// 	margin-top: 1.5em;
+// }
+
+ul {
+	list-style: none;
+}
+
+// Content elements margins
+
+.dslc-tp-content, .dslc-text-module-content {
+	ul, ol, table, dl, address, pre {
+		margin-bottom: 20px;
+	}
+
+	ul, ol {
+		ul, ol {
+			margin-bottom: 0;
+		}
+	}
+
+	table {
+		th, td {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	   	padding: 0.5em 0.75em !important;
+		}
+
+		thead {
+			th, td {
+				background-color: rgba(0,0,0,.025);
+			}
+		}
+
+		tr:last-child {
+			th, td {
+				border-bottom: none;
+			}
+		}
+	}
+
+	dl {
+		dt {
+			font-weight: 400;
+			padding-bottom: 10px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		}
+
+		dd {
+			padding-top: 10px;
+			margin-bottom: 20px;
+		}
+	}
+
+	address {
+		border: 1px solid rgba(137, 137, 137, 0.075);
+		display: inline-block;
+		padding: 25px 30px;
+	}
+
+	blockquote {
+		padding-left: 30px;
+		border-left: 1px solid rgba(137, 137, 137, 0.075);
+
+		cite {
+			display: block;
+			font-size: 85%;
+			margin-top: 20px;
+		}
+	}
+
+	// List elements styling
+	ul, ol {
+		li {
+			list-style-position: inside;
+
+			ul, ol {
+				padding-left: 30px;
+			}
+		}
+
+		&.arrow li {
+			list-style-type: none;
+
+			&:before {
+				@include icon-font;
+				content: "\e100";
+
+				margin-right: 5px;
+				opacity: .5;
+			}
+		}
+	}
+}
+
+.no-side-padding,
+.no-side-padding.dslc-modules-section {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/**
+* ----------------------------------------------------------------------
+* Border radius
+*/
+
+.border-radius-top-0 {
+	@include border-top-radius(0);
+}
+
+.border-radius-bottom-0 {
+	@include border-top-radius(0);
+}
+
+.border-radius-right-0 {
+	@include border-right-radius(0);
+}
+
+.border-radius-left-0 {
+	@include border-left-radius(0);
+}
+
+
+/**
+* ----------------------------------------------------------------------
+* Page Header
+*/
+
+.site-header {
+	position: relative;
+	z-index: 20;
+}
+
+/**
+* ----------------------------------------------------------------------
+* Standatd WP classes
+*/
+
+// REQUIRED:.wp-caption css class is needed in your theme css.
+// REQUIRED:.wp-caption-text css class is needed in your theme css.
+// REQUIRED:.gallery-caption css class is needed in your theme css.
+// REQUIRED:.bypostauthor css class is needed in your theme css.
+// REQUIRED:.alignright css class is needed in your theme css.
+// REQUIRED:.alignleft css class is needed in your theme css.
+// REQUIRED:.aligncenter css class is needed in your theme css.
+
+.wp-caption-text, .gallery-caption, .bypostauthor {
+	color: inherit;
+}
+
+// .alignleft {
+// 	text-align: left;
+// }
+
+// .aligncenter {
+// 	text-align: center;
+// }
+
+// .alignright {
+// 	text-align: right;
+// }
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption.alignnone {
+	// make sure image never goes over the edge of the content div
+	width: auto !important;
+}
+
+/**
+* ----------------------------------------------------------------------
+* Images Styling
+*/
+
+img[src=""] {
+	 display: none !important;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/**
+* ----------------------------------------------------------------------
+* Boxed content
+*/
+
+body.boxed-page-layout {
+	&:before {
+		@include emptyPseudoElement;
+	}
+	// background-color: #F2F2F2;
+}
+
+.boxed-page-layout .global-wrapper {
+	// background: #FFFFFF;
+	@include box-shadow( 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 0 7px 1px rgba(0, 0, 0, 0.1) );
+	margin: 0 auto;
+	max-width: 1360px;
+	// max-width: $row-width + $column-gutter + $column-gutter;
+}
+
+#global-container {
+	position: relative;
+	z-index: 2;
+}
+
+/**
+* ----------------------------------------------------------------------
+* Site page preloader
+*/
+.pseudo-preloader {
+	// .page-is-loading {
+	.global-container {
+		z-index: 100;
+		position: relative;
+	}
+
+	.global-wrapper{
+		&:before {
+			@include emptyPseudoElement;
+			@include transition (all .7s .3s);
+			z-index: 500;
+			background: #fff;
+		}
+
+		&:after {
+			@include icon-font;
+			content: "\f110";
+			position: absolute;
+
+			display: inline-block;
+
+			color: rgba(0,0,0,.7);
+
+			// width: 40px;
+			// height: 40px;
+
+			left: 50%;
+			top: 400px;
+
+			margin-left: 12px;
+			font-size: 24px;
+			line-height: 1;
+			z-index: 600;
+
+			text-align: center;
+			vertical-align: middle;
+
+			-webkit-animation: spin 1.15s infinite linear;
+			-moz-animation: spin 1.15s infinite linear;
+			-o-animation: spin 1.15s infinite linear;
+			animation: spin 1.15s infinite linear;
+
+			@include transition (all 1s);
+		}
+	}
+}
+
+body.content-loaded .global-wrapper {
+	&:before, &:after {
+		opacity: 0;
+		z-index: 0;
+		color: rgba(0,0,0,0);
+		@include transition (all 0.3s);
+	}
+}
+
+@-webkit-keyframes spin {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes spin {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes spin {
+	from {
+		-o-transform: rotate(0deg);
+	}
+	to {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/**
+* ----------------------------------------------------------------------
+* Content
+*/
+
+.site-main {
+	position: relative;
+	z-index: 10;
+}
+
+/**
+* ----------------------------------------------------------------------
+* WordPress Customizer
+* Highlighted element styling
+*/
+
+.highlighted-element {
+	opacity: 1!important;
+	&:after {
+		@include emptyPseudoElement;
+		z-index: 100;
+		background:rgba(255, 3, 215, 0.7);
+
+		@include transition (all .3s ease-in-out);
+		// @include border-radius (6px);
+		@include box-shadow (
+			0 0 20px 0px rgba(255, 3, 215, 1) inset,
+			0 2px 50px 0 rgba(255, 3, 215, 0.5) inset
+		);
+	}
+}
+
+/**
+* ----------------------------------------------------------------------
+* Easy Social Share Buttons plugin styles improvement
+*/
+
+.essb_links {
+	line-height: 24px;
+}
+
+.essb_links,
+.essb_links *,
+.essb_links *:before,
+.essb_links *:after {
+	@include box-sizing(padding-box);
+}
+
+// disable LiveComposer font settings for ESSB elements
+#global-container #dslc-content .dslc-html-module-content .essb_links li a {
+	font-size: 14px;
+	font-family: helvetica, arial, sans-serif;
+}
+
+.social-icons-fullwidth .essb_links {
+	text-align: center;
+	margin: 0;
+	overflow: hidden;
+}
+
+.social-icons-fullwidth .essb_links_list{
+	margin-left: -3%!important;
+	margin-right: -3%!important;
+}
+
+.social-icons-fullwidth .essb_links li a {
+	margin: 0;
+}
+
+#global-container .social-icons-fullwidth #dslc-content .dslc-html-module-content {
+	margin: 0;
+}
+
+
+/**
+ * ----------------------------------------------------------------------
+ * Post pagination control styling
+ */
+
+.page-links {
+
+	.page-links__title {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		opacity: .5;
+	}
+
+	.page-numbers {
+		word-spacing: 20px;
+	}
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * Password protected post styling
+ */
+
+.single .post-password-required {
+	width: 50%;
+	margin: 100px auto;
+	text-align: center;
+
+	p:first-child {
+		font-size: 27px;
+	   line-height: 38px;
+	   margin-bottom: 60px;
+	}
+}
+
+
+/**
+* ----------------------------------------------------------------------
+* Live Composer
+*/
+
+.dslca-prompt-modal-descr textarea {
+	width: 100%;
+}
+
+.dslc-page .site-content {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.dslca-wp-editor-inner {
+	*, &:before, &:after {
+		@include box-sizing(padding-box);
+	}
+}
+
+// Make sure Live Composer TinyMCE editor pop-up
+// is not covered by floating header
+body.dslca-enabled .site-main,
+body.dslca-enabled #global-container {
+	z-index: auto;
+}
+
+// make Visual | Text tabs looks right
+body .dslca-wp-editor .wp-switch-editor {
+	height: auto;
+}
+
+.dslc-text-module-content p,
+.dslc-info-box-content p {
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+.dslc-text-module-content .dslca-editable-content {
+	margin-bottom: inherit;
+}
+
+.dslc-info-box-content p {
+	margin-bottom: 0;
+}
+
+// Posts separator fix
+.dslc-post-separator {
+	border-right-width: 0;
+	border-left-width: 0;
+	border-top-width: 0;
+}
+
+// Info box - icon margin bottom only for vertical module
+.dslc-info-box-icon-pos-aside .dslc-info-box-image {
+	margin-bottom: 0;
+}
+
+// Testimonials
+.dslc-testimonial-quote blockquote {
+	 border-left: medium none;
+	 color: inherit !important;
+	 line-height: inherit !important;
+	 margin: 0;
+	 padding: 0;
+}
+
+.dslc-testimonial-quote .bq-open {
+	float: left;
+	font-size: 300%;
+	margin-bottom: 0.75em;
+	margin-right: 0.35em;
+	opacity: 0.3;
+}
+
+// Blog
+#dslc-content .blog-noauthor {
+	.dslc-blog-post-meta-author,
+	.dslc-cpt-post-meta-author {
+		display: none;
+	}
+
+	.dslc-blog-post-meta-date,
+	.dslc-cpt-post-meta-date {
+		float: left;
+	}
+}
+
+#global-container #dslc-content .dslc-blog-posts .dslc-posts-inner > .dslc-post-separator:last-child {
+	margin: 0;
+	padding: 0;
+}
+
+// Avatar layout bug fix
+#dslc-content .dslc-blog-post-meta-avatar img {
+	height: auto;
+}
+
+// My approach for blog post grid thumbnails
+#global-container #dslc-content .blog-balanced-thumbnail {
+	.dslc-module-DSLC_Posts,
+	.dslc-module-DSLC_Blog,
+	.dslc-module-LBMN_ArchivePostsGrid_LC_Module {
+		.dslc-post {
+			overflow: hidden;
+		}
+
+		.dslc-post-thumb {
+			min-height: 1px;
+			// in case there is no thumbnail set, we need to be shure
+			// that card content do not overlap with thumbnail area
+		}
+
+		.dslc-post-thumb {
+			margin-bottom: -999px;
+			padding-bottom: 1000px;
+		}
+	}
+
+}
+
+// Live Composer admin controls improvements
+
+// disable icon suggestion
+// disable prev/next icon buttons
+// disable prev/next font buttons
+body .dslca-module-edit-field-icon-suggest,
+body .dslca-module-edit-field-icon-prev,
+body .dslca-module-edit-field-icon-next,
+body .dslca-module-edit-field-font-prev,
+body .dslca-module-edit-field-font-next {
+	display: none;
+}
+
+body .dslca-module-edit-field-font-wrapper {
+	width: 100%;
+}
+
+// font loader spiner
+.dslca-module-edit-option-font {
+	position: relative;
+
+	.dslc-icon-refresh {
+		display: none;
+		right: 12px;
+		position: absolute;
+		opacity: .5;
+		bottom: 10px;
+	}
+}
+
+.wf-loading {
+	.dslca-module-edit-option-font .dslc-icon-refresh {
+		display: inline-block;
+	}
+}
+
+.dslca-modal-allicons {
+	left: 60px!important;
+	right: 60px;
+	top: 90px;
+	width: auto;
+	position: fixed;
+}
+
+.dslca-modal-allicons {
+
+	.modal-content {
+		height: 100%;
+		overflow: scroll;
+	}
+
+	.lbmn-icons-grid {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.icon-item {
+		display: inline-block;
+		width: 9%;
+		min-width: 140px;
+		min-height: 150px;
+
+		padding: 20px 10px;
+		margin: 0 0 0 -1px;
+
+		vertical-align: top;
+		text-align: center;
+
+		border-left: 1px solid rgba(155, 155, 155, 0.05);
+		border-bottom: 1px solid rgba(155, 155, 155, 0.05);
+
+		&:hover {
+			@include box-shadow(0 1px 5px 0px rgba(68, 68, 68, 0.52));
+		}
+
+		&:active {
+			@include box-shadow(0 1px 5px 0px #5890E5 inset);
+		}
+	}
+
+	.icon-item__icon {
+		display: inline-block;
+		width: 100%;
+		padding: 20px 0;
+		font-size: 24px;
+	}
+
+	.icon-item__name {
+		opacity: .35;
+		display: inline-block;
+		font-size: 14px;
+		line-height: 1.25;
+	}
+}
+
+// reset to default button
+.dslca-module-edit-label .button-reset {
+	float: right;
+	cursor: pointer;
+	opacity: .4;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	font-size: 9px;
+	padding: 4px 5px;
+	margin-top: -5px;
+	border-radius: 3px;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+// override unneeded foundation zurb property for all form elements
+.dslca-module-edit-option input[type="text"],
+.dslca-module-edit-option input[type="email"],
+.dslca-module-edit-option input[type="number"],
+.dslca-module-edit-option textarea,
+.dslca-module-edit-option select {
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * Blog post format styling with icons
+ */
+/*
+.blog-add-icons {
+	.dslc-post-no-thumb .dslc-post-main {
+		&:before {
+			@include emptyPseudoElement;
+			@include icon-font;
+			font-size: 60px;
+			left: 50%;
+			margin-left: -30px;
+			top: 123px;
+			opacity: 0.25;
+		}
+	}
+
+	&.blog-card-height-med {
+		.dslc-post-no-thumb .dslc-post-thumb:before {
+			top: 90px;
+		}
+	}
+
+	.dslc-post-no-thumb .dslc-post-thumb:before {
+		content: "\e00a"; // notebook icon
+	}
+
+
+	.dslc-post-format-aside.dslc-post-no-thumb .dslc-post-main:before {
+		content: "\e032"; // pencil icon
+	}
+
+	.dslc-post-format-quote.dslc-post-no-thumb .dslc-blog-post-thumb:before {
+		content: "\e057"; // quote icon
+	}
+
+	.dslc-post-format-link.dslc-post-no-thumb .dslc-blog-post-thumb:before {
+		content: "\e053"; // compass icon
+	}
+
+	.dslc-post-format-video.dslc-post-no-thumb .dslc-blog-post-thumb:before {
+		content: "\e011"; // video icon
+	}
+
+	.dslc-post-format-image.dslc-post-no-thumb .dslc-blog-post-thumb:before {
+		content: "\e00f"; // picture icon
+	}
+}
+*/
+
+// Post Meta Module
+#dslc-content .dslc-module-DSLC_TP_Meta {
+	li {
+		list-style-position: outside;
+	}
+}
+
+// Live Composer Comment Form
+.comment-form #submit {
+	text-transform: lowercase;
+	@include box-shadow(none);
+}
+
+// Ping backs styling
+.dslc-comments-pingback {
+  border-bottom: 1px solid rgba(155, 155, 155, 0.1);
+  font-size: 90%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  p {
+  	margin-bottom: 0;
+  }
+}
+
+// Message that comments are closed
+.nocomments {
+  border: 1px solid rgba(155, 155, 155, 0.1);
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 80%;
+  letter-spacing: 1px;
+  padding: 5px 14px;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+// Accordion
+body .dslc-accordion-item {
+	margin-top: 0;
+}
+
+
+/**
+ * ----------------------------------------------------------------------
+ * NEX-Form plugin styling
+ */
+
+body {
+	#nex-forms .radio-inline, #nex-forms .checkbox-inline {
+		font-weight: inherit;
+	}
+
+	#nex-forms div.input-inner {
+		margin-bottom: 8px;
+	}
+
+	#nex-forms div.radio-group label.radio-inline,
+	#nex-forms div.radio-group label.checkbox-inline,
+	#nex-forms div.checkbox-group label {
+		padding-left: 45px;
+	}
+
+	#nex-forms .btn {
+		@include box-shadow(none);
+
+		&.input-lg{
+			padding-left: 20px;
+			padding-right: 20px;
+			font-size: 16px;
+		}
+	}
+
+}
+
+/**
+* ----------------------------------------------------------------------
+* Theme help messages
+* Pop-ups used when there in no required plugin installed, etc.
+*/
+.message-popup{
+	position: fixed;
+	z-index: 100000;
+	background: rgba(0, 0, 0, 0.75);
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	left: 0;
+	top: 0;
+}
+
+.message-popup .message-content {
+	position: relative;
+	background:#fff;
+	width: 660px;
+	margin: 120px auto;
+	padding: 50px 40px;
+}
+
+.message-popup .close-help-popup {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: inline-block;
+	font-size: 21px;
+	padding: 20px 22px;
+}
+
+.message-popup .welcome-panel h3 {
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.message-popup .welcome-panel .button.button-hero {
+	margin: 0;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * Rotating twitter plugin styling
+ */
+
+.rtw_meta {
+	font-size: 13px;
+	line-height: 21px;
+	margin-bottom: 0;
+	opacity: 0.4;
+}
+
+/**
+* ----------------------------------------------------------------------
+* Contact form 7
+*/
+
+.wpcf7-form-control-wrap {
+	// @include clearfix;
+	display: block;
+}
+
+
+.wpcf7-list-item-label {
+	margin-left: 10px;
+}
+
+.wpcf7-form-control + .wpcf7-not-valid-tip {
+	top: auto;
+	left: 0;
+	@include border-radius(0 0 6px 6px);
+	margin-top: -26px;
+	width: 100%;
+	background:red;
+	color: #fff;
+	border: none;
+	font-weight: bolder;
+	text-transform: uppercase;
+	padding-left: 8px;
+}
+
+.wpcf7-response-output.wpcf7-validation-errors {
+	@include border-radius(6px);
+	background:#FF8500;
+	color: #fff;
+	border: none;
+	padding-left: 10px;
+
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.wpcf7-response-output.wpcf7-mail-sent-ok {
+	@include border-radius(6px);
+	background: #398F14;
+	color: #fff;
+	border: none;
+	padding-left: 10px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * NEXForms plugin styling improvement
+ */
+
+body {
+	#nex-forms {
+		// Strange error after update to 1.1: form labels are hidden
+		.ui-nex-forms-container label#title,
+		.ui-nex-forms-container .help-block {
+			 display: inherit;
+		}
+
+		// Make form labels width wider
+		.input_holder {
+			.col-sm-2 {
+				width: 25%;
+			}
+
+			.col-sm-10 {
+				width: 75%;
+			}
+		}
+
+		label {
+			font-weight: normal;
+		}
+
+		.is_required.btn-xs {
+			position: absolute;
+			color: rgba(255, 85, 0, 0.5)!important;
+
+			left: -14px;
+			top: 7px;
+		}
+
+		.input-sm .is_required.btn-xs {
+			left: -4px;
+			top: 10px;
+		}
+
+		.input-lg .is_required.btn-xs {
+			left: 1px;
+			top: 16px;
+		}
+
+		.input-lg {
+			font-size: 19px;
+			font-weight: 300;
+
+			.sub-text {
+				font-size: 12px;
+				position: relative;
+				top: -9px;
+			}
+		}
+	}
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * Some form styling
+ */
+
+form label {
+	margin-right: 0.75em;
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * Other SCCS files includes
+ */
+
+@import "_header"; // import website header styles
+@import "_widgets"; // import sidebar widgets styles
+@import "_footer"; // import website footer styles
+@import "_emodal"; // import easy modal plugin customization styles
+
+@import "_livecomposer-mobilefirst";
+
+@import "_offcanvas";
+@import "_formalize"; // http://formalize.me - styles for better forms
+
+/**
+* ----------------------------------------------------------------------
+* Custom Media Queries
+*/
+
+@import "custom-media-queries";
+
+/* Fix width jumping on page loading */
+.dslc-modules-section-wrapper, .dslca-add-modules-section { width : 1200px; }
+
+/* Fix Mega Main Menu icon on specially styled elements */
+[class^="dslc-icon-ext-"], [class*=" dslc-icon-ext-"] {
+	font-family: 'iconfont' !important;
+}

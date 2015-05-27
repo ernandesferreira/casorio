@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="1.1.1" date="2014-07-02">
+        <change>White color changing to black during .ico conversion - fixed</change>
+        <change>Favicon image cache is now being cleared on change</change>
+    </release>
+    <release version="1.1.0" date="2014-06-30">
+        <change>Issues when using HTTPS protocol in wp-admin fixed</change>
+        <change>Added note about transparency on some mobile devices</change>
+        <change>Added notification when user inserts incorrect size under the Advanced tab</change>
+        <change>Changed the order of including to fix an incorrect icon size on desktop computers with Retina displays</change>
+    </release>
+    <release version="1.0.0" date="2014-06-27">
+        <change>Initial release</change>
+    </release>
+</changelog>

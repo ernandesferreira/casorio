@@ -1,0 +1,617 @@
+/**
+* ----------------------------------------------------------------------
+* Notification panel
+*/
+
+.notification-panel {
+	display: none;
+	position: relative;
+	z-index: 20;
+	padding: 0 20px;
+	text-align: center;
+
+	@include transition(all 0.5s ease 0s);
+
+	// need this pseudo element for vertical alignment
+	// of the panel content
+	&:before {
+		content: "";
+		width: 1px;
+		margin-right: -0.4em;
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+
+
+@media only screen and (max-width: 767px) {
+	body .notification-panel {
+		display: none!important;
+	}
+}
+
+.notification-panel__icon {
+	font-size: 135%;
+	margin-left: 15px;
+	margin-right: 10px;
+	opacity: 0.5;
+	vertical-align: middle;
+}
+
+.in-wp-customizer .notification-panel__icon {
+	vertical-align: text-bottom;
+}
+
+.notification-panel__content {
+	display: inline;
+	font-size: 16px;
+	vertical-align: text-bottom;
+
+	position: relative;
+	z-index: 1;
+}
+
+.notification-panel__message {
+	display: inline-block;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: middle;
+	line-height: 1.3;
+}
+
+
+.notification-panel__cta-icon {
+	font-size: 150%;
+	opacity: 0.5;
+	vertical-align: middle;
+	margin-top: -0.05em;
+}
+
+.notification-panel__cta-link {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+.notification-panel__close {
+	display: inline-block;
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	right: 0;
+	margin-top: -16px;
+	// height: 100%;
+
+	padding: 0 30px;
+	font-size: 25px;
+
+	opacity: .5;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * Website header
+ */
+
+.site-header {
+}
+
+.dslca-enabled .site-header  {
+
+	background:#fff;
+	color: #999999;
+
+	text-transform: uppercase;
+	font-size: 11px;
+	font-family: "Open Sans";
+	font-weight: 900;
+
+	text-align: center;
+	padding: 20px;
+}
+
+
+/**
+* ----------------------------------------------------------------------
+* Topbar: Mega main menu plugin output adjustments
+*/
+
+
+.topbar {
+	position: relative;
+   z-index: 30; // .site-header --> z-index: 20;
+
+	.menu_holder {
+		position: relative;
+
+		&:before {
+			content:'';
+			position: absolute;
+			left:0; width:100%;
+			top:0; height:100%;
+		}
+	}
+
+	.menu_inner {
+		position: relative;
+		z-index: 1;
+	}
+
+
+}
+
+
+/**
+* ----------------------------------------------------------------------
+* Header: Mega main menu plugin output adjustments
+*/
+
+#mega_main_menu.disabled {
+	display: none;
+}
+
+
+.mega_main_menu {
+
+	// We use .menu_holder:before to set header background and opacity
+	// in customized-css.php; Here we create pseudo block
+	.menu_holder {
+		position:relative;
+
+		padding-left: 20px;
+		padding-right: 20px;
+
+		&:before {
+			content:'';
+			position: absolute;
+			left:0; width:100%;
+			top:0; height:100%;
+		}
+
+		// &:after {
+		// 	display: none;
+		// 	bottom: 0;
+		// 	top: auto;
+		// }
+	}
+
+
+	// Need this pseudo element to make sure logo is verticaly alighned
+	// in WP customizer
+	.logo_link:before {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	// By default retina logo is hidden
+	// we show it and hide normal logo in _custom-media-queries.scss
+	.nav_logo .logo_link .nav_logo__retina {
+		display: none;
+	}
+
+	// Logo: top-left
+	&.logoplacement-top-left .nav_logo {
+		text-align:left;
+	}
+	// Logo: top-center
+	&.logoplacement-top-center .nav_logo {
+		text-align:center;
+	}
+	// Logo: top-right
+	&.logoplacement-top-right .nav_logo {
+		text-align:right;
+	}
+
+	// IF LOGO IS ABOVE MENU
+	&.logoplacement-top-left,
+	&.logoplacement-top-center,
+	&.logoplacement-top-right {
+		// Show menu section background
+		.menu_holder:after {
+			display: block;
+		}
+
+		.nav_logo {
+			width:100%;
+			padding-top: 0px;
+		}
+	}
+
+	& > .menu_holder > .menu_inner > ul li > .item_link .link_text {
+		line-height: inherit;
+	}
+
+	// ???
+	// .include-search .mega_main_menu_ul .menu-item:nth-child(2) > .item_link:after {
+	// 	display: none!important;
+	// }
+
+
+	// hide search box unless mega_menu has class .include-search
+	// need this for ThemeCustomizer search box instant show/hide
+	&.no-search .nav_search_box {
+		display: none!important;
+	}
+
+	&.include-search .nav_search_box {
+		display: inline-block!important;
+	}
+
+	// remove menu separator before search item
+	.nav_search_box:before {
+		display: none!important;
+	}
+
+	&#mega_main_menu > .menu_holder > .menu_inner > ul > li.nav_search_box #mega_main_menu_searchform .field {
+		@include transition (all .1s ease 0s);
+
+	}
+
+	&#mega_main_menu > .menu_holder > .menu_inner > ul > li.nav_search_box #mega_main_menu_searchform .field:focus {
+		@include transition (all .2s ease .2s);
+	}
+
+	// #mega_main_menu_searchform .field {
+	// 	@include transition (all 0 5s ease-in-out);
+	// }
+
+	#mega_main_menu_searchform:before {
+		// @include transition (box-shadow 1.7s 0 ease-in-out);
+		@include transition (all .2s ease 0s);
+	}
+
+	&.search-shadow-inside #mega_main_menu_searchform:before {
+		@include box-shadow( 0 1px 5px 0 rgba(0, 0, 0, 0.3) inset, 0 1px 1px 0 rgba(0, 0, 0, 0.3) inset, 0 1px 10px 0 rgba(0, 0, 0, 0.1) inset );
+	}
+
+	&.search-shadow-outside #mega_main_menu_searchform:before {
+		@include box-shadow( 0 1px 3px 0 rgba(0, 0, 0, 0.4) );
+	}
+
+	li.nav_search_box > #mega_main_menu_searchform {
+		&:before {
+			@include emptyPseudoElement;
+		}
+	}
+
+	a.menu-icon {
+		margin-right: -20px;
+		padding: 0 10% 0 0;
+	}
+
+
+	// &#mega_main_menu > .menu_holder > .menu_inner > ul li.additional_style_2 > .item_link {
+	// 	margin-bottom: 20px;
+
+	// 	.link_text {
+	// 		letter-spacing: 1px;
+	// 		text-transform: uppercase;
+	// 	}
+	// }
+
+}
+
+// Dropdown arrow
+#mega_main_menu > .menu_holder > .menu_inner > ul > li > .item_link::after {
+	font-family: 'iconfont';
+	content: '\e82e';
+}
+
+// Dropdown heading styling
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.multicolumn_dropdown,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.widgets_dropdown {
+	.mega_dropdown > li.additional_style_2 > .item_link {
+		margin-top: 12px;
+		margin-bottom: 8px;
+
+		.link_text {
+			letter-spacing: 1px;
+			text-transform: uppercase;
+
+			.link_descr {
+				letter-spacing: 0;
+				text-transform: none;
+
+				// Do not change item description color for headings
+				color: inherit;
+			}
+		}
+	}
+}
+
+// disable padding for hidden items
+#mega_main_menu .mega_dropdown > li > .item_link.menu_item_without_text.disable_icon {
+	padding: 0!important;
+}
+
+// Improve Post Grid drop-down elements spacing
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li .post_details > .post_icon {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li .post_details > .post_icon,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li .post_details > .post_icon > i {
+	width: 80px;
+}
+
+body #mega_main_menu.mega_main_menu > .menu_holder > .menu_inner > ul > li .post_details > .post_title {
+	margin-top: 25px;
+	margin-bottom: 10px;
+	font-size: 19px;
+}
+
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li .post_details > .post_title,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li .post_details > .post_description {
+	margin-left: 80px;
+}
+
+
+// Make icons in the dropdowns a bit transparent
+body #mega_main_menu ul li .mega_dropdown > li > .item_link > i {
+	opacity: .7;
+}
+
+// Bigger left margin for items with icon
+body #mega_main_menu.header-menu ul li .mega_dropdown > li > .item_link > i + .link_content  {
+	padding-left: 4px;
+}
+
+// Make menu item description a bit bigger
+body #mega_main_menu > .menu_holder > .menu_inner .item_link > .link_content > .link_text > .link_descr {
+	font-size: 90%;
+	opacity: 0.5;
+}
+
+// Dropdown with columns width improvement
+
+// #mega_main_menu > .menu_holder > .menu_inner > ul > li.post_type_dropdown > .mega_dropdown,
+// #mega_main_menu > .menu_holder > .menu_inner > ul > li.grid_dropdown > .mega_dropdown,
+// #mega_main_menu > .menu_holder > .menu_inner > ul > li .mega_dropdown > li .post_details
+
+#mega_main_menu > .menu_holder > .menu_inner > ul > li.multicolumn_dropdown:not(.submenu_full_width),
+#mega_main_menu > .menu_holder > .menu_inner > ul > li.widgets_dropdown:not(.submenu_full_width) {
+	&.columns2 > .mega_dropdown {
+		width: 520px;
+	}
+	&.columns3 > .mega_dropdown {
+		width: 780px;
+	}
+	&.columns4 > .mega_dropdown,
+	&.columns5 > .mega_dropdown,
+	&.columns6 > .mega_dropdown,
+	&.columns7 > .mega_dropdown,
+	&.columns8 > .mega_dropdown,
+	&.columns9 > .mega_dropdown,
+	&.columns10 > .mega_dropdown {
+		width: 1024px;
+	}
+}
+
+// Full-width dropdown hover fixer
+
+#mega_main_menu ul > li.submenu_full_width > .mega_dropdown {
+	top: auto;
+}
+
+#mega_main_menu.header-menu ul.mega_main_menu_ul > li > .mega_dropdown {
+	margin-top: 20px;
+
+	&:before {
+		content: "";
+		display: block;
+		height: 21px;
+		left: 0;
+		position: absolute;
+		top: -21px;
+		width: 100%;
+	}
+}
+
+
+// Post grid and icon grid style improvement
+
+
+// #mega_main_menu > .menu_holder > .menu_inner > ul > li.nav_buddypress.not_logged:hover > .mega_dropdown,
+// #mega_main_menu > .menu_holder > .menu_inner > ul > li.multicolumn_dropdown:hover > .mega_dropdown,
+// #mega_main_menu > .menu_holder > .menu_inner > ul > li.multicolumn_dropdown > .item_link:hover + .mega_dropdown,
+// #mega_main_menu > .menu_holder > .menu_inner > ul > li.multicolumn_dropdown.keep_open > .mega_dropdown,
+// #mega_main_menu > .menu_holder > .menu_inner > ul > li.widgets_dropdown:hover > .mega_dropdown,
+// #mega_main_menu > .menu_holder > .menu_inner > ul > li.widgets_dropdown > .item_link:hover + .mega_dropdown,
+// #mega_main_menu > .menu_holder > .menu_inner > ul > li.widgets_dropdown.keep_open > .mega_dropdown,
+
+
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.grid_dropdown:hover > .mega_dropdown,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.grid_dropdown > .item_link:hover + .mega_dropdown,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.grid_dropdown.keep_open > .mega_dropdown,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.grid_dropdown:hover > .mega_dropdown,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.grid_dropdown > .mega_dropdown > li:hover .post_details,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.grid_dropdown > .mega_dropdown > li.keep_open .post_details,
+
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.post_type_dropdown:hover > .mega_dropdown,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.post_type_dropdown > .item_link:hover + .mega_dropdown,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.post_type_dropdown.keep_open > .mega_dropdown,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.post_type_dropdown > .mega_dropdown > .post_item:hover .post_details,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.post_type_dropdown > .mega_dropdown > .post_item.keep_open .post_details {
+	padding: 0;
+}
+
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li .post_details > .processed_image {
+	margin-bottom: 0;
+}
+
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.grid_dropdown .mega_dropdown > li,
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li.post_type_dropdown .mega_dropdown > li.post_item {
+	padding: 0;
+}
+
+body #mega_main_menu > .menu_holder > .menu_inner > ul > li .post_details > .post_description {
+	margin-right: 20px;
+	margin-bottom: 30px;
+}
+
+
+
+// Make appropriate search form styling on input:focus
+// when JavaScript is enabled
+
+html.js {
+
+	.header-menu .nav_search_box > #mega_main_menu_searchform:before {
+		opacity: 0;
+	}
+
+	.header-menu .nav_search_box > #mega_main_menu_searchform.search_form_focused:before {
+		opacity: 1;
+	}
+}
+
+/**
+ * ----------------------------------------------------------------------
+ * STICKY HEADER
+ */
+
+#mega_main_menu.direction-horizontal .sticky_container {
+	@include box-shadow(0 1px 3px 0 hsla(0, 0%, 61%, 0.4));
+}
+
+#mega_main_menu.direction-horizontal > .menu_holder.sticky_container .nav_logo {
+	text-align: left;
+}
+
+#mega_main_menu.direction-horizontal.logoplacement-bottom-right > .menu_holder .nav_logo {
+	text-align: right;
+}
+
+#mega_main_menu.header-menu {
+	&.logoplacement-bottom-left,
+	&.logoplacement-bottom-right {
+
+		.menu_holder {
+			width: 100%;
+			z-index: 2000;
+			// @include transition(all 0.5s 0 linear);
+			// @include transition(height 0.5s 0 linear);
+			// @include transition(min-height 0.5s 0 linear);
+
+			&.sticky_container {
+				// @include transition(all 0.5s 0  linear); //0.5s
+				// @include transition(height 0.5s 0  linear); //0.5s
+				// @include transition(min-height 0.5s 0  linear); //0.5s
+			}
+		}
+
+		.menu_holder * {
+			// @include transition(height 0.5s 0 linear);
+			// @include transition(min-height 0.5s 0 linear);
+
+			&.sticky_container * {
+				// @include transition(height 0.5s 0  linear); //0.5s
+				// @include transition(min-height 0.5s 0  linear); //0.5s
+			}
+		}
+
+	}
+}
+
+body.boxed-page-layout #mega_main_menu.header-menu .sticky_container {
+	left: auto;
+	max-width: 1360px;
+   z-index: 2000;
+}
+
+// make sure menu items text is vertically aligned with icons
+/*
+#mega_main_menu > .menu_holder > .menu_inner > ul li > .item_link > span:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	width: 0;
+	vertical-align: middle;
+}
+*/
+
+// Menu items align
+
+#mega_main_menu > .menu_holder > .menu_inner > ul > li.menu-align-left { float:left; }
+#mega_main_menu > .menu_holder > .menu_inner > ul > li.menu-align-right { float:right; }
+
+// Special style for menu items with disable link
+
+#mega_main_menu.nav_menu > .menu_holder > .menu_inner > ul > li:hover > span.item_link,
+#mega_main_menu.nav_menu > .menu_holder > .menu_inner > ul > li > span.item_link:hover
+{ background:none; }
+
+// hide items separator for logo
+#mega_main_menu.direction-horizontal > .menu_holder > .menu_inner > .nav_logo:before {
+	display: none!important;
+}
+
+
+// Exclude logo from the sticky header on scroll
+// if it's possitioned on the top of the menu
+
+#mega_main_menu.header-menu {
+	&.logoplacement-top-left,
+	&.logoplacement-top-center,
+	&.logoplacement-top-right {
+
+		.nav_logo {
+			max-width: 1360px;
+			// min-width: 1200px;
+		}
+
+		.sticky_container {
+			padding: 0;
+			min-height: 0;
+
+			.nav_logo {
+				display: none;
+			}
+
+			// Disable animation on header attachement
+			// when logo is on the top
+			.menu_holder,
+			.menu_holder.sticky_container {
+				-moz-transition: none;
+				-webkit-transition: none;
+				-o-transition: color 0 ease-in;
+				transition: none;
+				// @include transition(all 0 0);
+			}
+		}
+	}
+}
+
+
+// Logo: bottom-right
+#mega_main_menu.logoplacement-bottom-right .nav_logo {
+	float:right;
+}
+
+body #mega_main_menu .nav_logo .logo_link{
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+
+#mega_main_menu > .menu_holder > .menu_inner > ul > li.nav_search_box #mega_main_menu_searchform .field:focus {
+	padding-left: 14px;
+}
+
+body #mega_main_menu.header-menu > .menu_holder > .menu_inner > ul > li.nav_search_box {
+		& > #mega_main_menu_searchform {
+			border: none;
+			background: none;
+		}
+}

@@ -1,0 +1,2716 @@
+
+		// FILE-INFO-START
+		// menu-id: mega-main-menu;
+		// data-type: sql;
+		// FILE-INFO-END
+		
+		// INSERT MENU
+		$wpdb->query("INSERT INTO ".$wpdb->prefix."terms (name, slug) 
+										VALUES ('Mega Main Menu', 'mega-main-menu')");		
+		$new_menu_id = $wpdb->insert_id;				
+
+		$wpdb->query("INSERT INTO ".$wpdb->prefix."term_taxonomy (term_id, taxonomy, count)
+										VALUES (".$new_menu_id.", 'nav_menu', 15)");				
+		$tti = $wpdb->insert_id;
+		
+			$prev_post_id = array();
+		
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2013-12-14 10:36:29', '2013-12-14 10:36:29', '', 'Free Support', '', 'publish', 'open', 'open', '', '680', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 15, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[680] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=680", "?p=".$new_post_id, "#wpurl#/?p=680")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '680')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', 'http://themeforest.net/user/lumbermandesigns')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_item_icon', 'im-icon-phone')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_disable_icon', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_disable_link', 'a:2:{i:0;s:11:\"is_checkbox\";i:1;s:4:\"true\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_type', 'post_type_dropdown')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_post_type', 'page')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_drops_side', 'drop_to_right')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_columns', '5')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_enable_full_width', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_bg_image', 'a:5:{s:16:\"background_image\";s:0:\"\";s:17:\"background_repeat\";s:6:\"repeat\";s:21:\"background_attachment\";s:6:\"scroll\";s:19:\"background_position\";s:6:\"center\";s:15:\"background_size\";s:4:\"auto\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', 'fa-icon-umbrella')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', 'default_dropdown')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', 'post')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', 'drop_to_right')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '5')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', 'a:5:{s:16:\"background_image\";s:0:\"\";s:17:\"background_repeat\";s:6:\"repeat\";s:21:\"background_attachment\";s:6:\"scroll\";s:19:\"background_position\";s:6:\"center\";s:15:\"background_size\";s:4:\"auto\";}')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-03-17 00:05:19', '2014-03-17 00:05:19', '', 'Theme Options', '', 'publish', 'open', 'open', '', '681', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 7, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[681] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=681", "?p=".$new_post_id, "#wpurl#/?p=681")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '700')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '681')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '/wp-admin/customize.php#first-time-visit')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_item_icon', 'im-icon-certificate')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_disable_icon', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmpm_submenu_bg_image', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', 'Our theme uses WordPress Theme Customizer were you can change all the design settings with instant live preview.')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', 'im-icon-palette')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-05-13 07:33:13', '2014-05-13 07:33:13', '', 'Documentation', '', 'publish', 'open', 'open', '', '696', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 8, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[696] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=696", "?p=".$new_post_id, "#wpurl#/?p=696")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '696')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', 'http://docs.lumbermandesigns.com/')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', 'im-icon-book-2')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', 'multicolumn_dropdown')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', 'post')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', 'drop_to_center')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '2')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', 'a:5:{s:16:\"background_image\";s:61:\"#wpurl#/wp-content/uploads/2014/06/dropdown-docs-2.png\";s:17:\"background_repeat\";s:9:\"no-repeat\";s:21:\"background_attachment\";s:6:\"scroll\";s:19:\"background_position\";s:12:\"center right\";s:15:\"background_size\";s:4:\"auto\";}')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-05-14 10:05:12', '2014-05-14 10:05:12', '', 'Home', '', 'publish', 'open', 'open', '', '697', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 1, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[697] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=697", "?p=".$new_post_id, "#wpurl#/?p=697")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '697')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '/')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', 'im-icon-home-6')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', 'default_dropdown')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', 'post')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', 'drop_to_right')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '1')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', 'a:5:{s:16:\"background_image\";s:0:\"\";s:17:\"background_repeat\";s:6:\"repeat\";s:21:\"background_attachment\";s:6:\"scroll\";s:19:\"background_position\";s:6:\"center\";s:15:\"background_size\";s:4:\"auto\";}')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-05-14 10:28:31', '2014-05-14 10:28:31', '', 'Interactive Tutorial', '', 'publish', 'open', 'open', '', '700', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 2, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[700] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=700", "?p=".$new_post_id, "#wpurl#/?p=700")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '0')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '700')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', 'im-icon-cone')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', 'grid_dropdown')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', 'post')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', 'drop_to_right')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '5')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', 'a:5:{s:16:\"background_image\";s:0:\"\";s:17:\"background_repeat\";s:6:\"repeat\";s:21:\"background_attachment\";s:6:\"scroll\";s:19:\"background_position\";s:6:\"center\";s:15:\"background_size\";s:4:\"auto\";}')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-06-10 13:24:20', '2014-06-10 13:24:20', '', '1. LiveComposer: Row', '', 'publish', 'open', 'open', '', '1-livecomposer-row', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 3, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[742] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=742", "?p=".$new_post_id, "#wpurl#/?p=742")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '700')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '742')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '/index.php?pagename=live-composer-tutorials/chapter-1')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', 'Here is the structure of Live Composer: Rows > Module Areas > Modules. In this chapter we will learn how to work with Rows.')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', 'fa-icon-align-justify')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-06-10 13:29:45', '2014-06-10 13:29:45', '', '2. LiveComposer: Modules Area', '', 'publish', 'open', 'open', '', '2-livecomposer-modules-area', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 4, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[747] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=747", "?p=".$new_post_id, "#wpurl#/?p=747")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '700')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '747')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '/index.php?pagename=live-composer-tutorials/chapter-2')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', 'In this chapter, we will show you how to work with module areas.')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', 'im-icon-grid-5')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-06-10 13:29:45', '2014-06-10 13:29:45', '', '3. LiveComposer: Modules', '', 'publish', 'open', 'open', '', '3-livecomposer-modules', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 5, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[748] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=748", "?p=".$new_post_id, "#wpurl#/?p=748")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '700')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '748')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '/index.php?pagename=live-composer-tutorials/chapter-3')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', 'In this chapter, we will show you how to use modules.
+These are the most important part of the Live Composer and they will allow you to display your content.')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', 'im-icon-cube')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-06-10 13:29:46', '2014-06-10 13:29:46', '', '4. LiveComposer: Templates System', '', 'publish', 'open', 'open', '', '4-livecomposer-templates-system', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 6, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[749] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=749", "?p=".$new_post_id, "#wpurl#/?p=749")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '700')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '749')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '/index.php?pagename=live-composer-tutorials/chapter-4')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', 'In this chapter, we will show you how to use the templates system.
+The templates system consists of 4 main features: Save, Load, Export and Import.')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', 'im-icon-puzzle')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-06-11 08:58:56', '2014-06-11 08:58:56', '', 'Theme Documentation', '', 'publish', 'open', 'open', '', 'theme-documentation', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 10, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[753] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=753", "?p=".$new_post_id, "#wpurl#/?p=753")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '757')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '753')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', 'http://docs.lumbermandesigns.com/')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-06-11 08:58:56', '2014-06-11 08:58:56', '', 'FAQ', '', 'publish', 'open', 'open', '', 'faq', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 11, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[754] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=754", "?p=".$new_post_id, "#wpurl#/?p=754")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '757')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '754')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', 'http://docs.lumbermandesigns.com/faq')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-06-11 08:58:56', '2014-06-11 08:58:56', '', 'Video Tutorials', '', 'publish', 'open', 'open', '', 'video-tutorials', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 12, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[755] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=755", "?p=".$new_post_id, "#wpurl#/?p=755")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '757')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '755')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', 'http://docs.lumbermandesigns.com/video-tutorials')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-06-11 08:58:56', '2014-06-11 08:58:56', '', 'Search Docs', '', 'publish', 'open', 'open', '', 'search-docs', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 13, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[756] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=756", "?p=".$new_post_id, "#wpurl#/?p=756")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '757')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '756')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', 'http://docs.lumbermandesigns.com/search')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-06-11 09:01:16', '2014-06-11 09:01:16', '', 'Dropdown Column', '', 'publish', 'open', 'open', '', 'dropdown-column', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 9, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[757] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=757", "?p=".$new_post_id, "#wpurl#/?p=757")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '696')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '757')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:2:{i:0;s:11:\"is_checkbox\";i:1;s:4:\"true\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:1:{i:0;s:11:\"is_checkbox\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."posts 
+					(post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, menu_order, post_type, 	post_mime_type, comment_count) 
+					VALUES 
+					(1, '2014-06-11 09:31:15', '2014-06-11 09:31:15', '', 'Dropdown Column', '', 'publish', 'open', 'open', '', 'dropdown-column-2', '', '', '2014-06-11 09:58:39', '2014-06-11 09:58:39', '', 0, 14, 'nav_menu_item', '', 0)");
+						
+			$new_post_id = $wpdb->insert_id;
+			
+			$prev_post_id[759] = $new_post_id;
+			$wpdb->query("UPDATE ".$wpdb->prefix."posts SET
+											guid = '".str_replace("?p=759", "?p=".$new_post_id, "#wpurl#/?p=759")."'
+												WHERE ID = ".$new_post_id);
+			
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_type', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_menu_item_parent', '696')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object_id', '759')");	
+												 
+						
+						$post_meta_id = $wpdb->insert_id;
+							
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_object', 'custom')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_target', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_xfn', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", '_menu_item_url', '#')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_descr', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_style', 'default_style')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_visibility', 'all')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_item_icon', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_text', 'a:2:{i:0;s:11:\"is_checkbox\";i:1;s:4:\"true\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_disable_link', 'a:2:{i:0;s:11:\"is_checkbox\";i:1;s:4:\"true\";}')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_post_type', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_drops_side', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_columns', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_enable_full_width', '')");	
+												 
+						
+						
+						$wpdb->query("INSERT INTO ".$wpdb->prefix."postmeta 
+												(post_id, meta_key, meta_value)
+												 VALUES 
+												 (".$new_post_id.", 'mmm_submenu_bg_image', '')");	
+												 
+						
+						
+			if($new_post_id) {
+			$wpdb->query("INSERT INTO ".$wpdb->prefix."term_relationships
+											(object_id, term_taxonomy_id)
+											VALUES 
+											(".$new_post_id.", ".$tti.")");
+			}											
+			
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[680]."' 
+													WHERE post_id = ".$prev_post_id[680]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[700]."' 
+													WHERE post_id = ".$prev_post_id[681]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[681]."' 
+													WHERE post_id = ".$prev_post_id[681]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[696]."' 
+													WHERE post_id = ".$prev_post_id[696]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[697]."' 
+													WHERE post_id = ".$prev_post_id[697]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[700]."' 
+													WHERE post_id = ".$prev_post_id[700]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[700]."' 
+													WHERE post_id = ".$prev_post_id[742]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[742]."' 
+													WHERE post_id = ".$prev_post_id[742]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[700]."' 
+													WHERE post_id = ".$prev_post_id[747]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[747]."' 
+													WHERE post_id = ".$prev_post_id[747]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[700]."' 
+													WHERE post_id = ".$prev_post_id[748]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[748]."' 
+													WHERE post_id = ".$prev_post_id[748]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[700]."' 
+													WHERE post_id = ".$prev_post_id[749]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[749]."' 
+													WHERE post_id = ".$prev_post_id[749]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[757]."' 
+													WHERE post_id = ".$prev_post_id[753]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[753]."' 
+													WHERE post_id = ".$prev_post_id[753]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[757]."' 
+													WHERE post_id = ".$prev_post_id[754]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[754]."' 
+													WHERE post_id = ".$prev_post_id[754]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[757]."' 
+													WHERE post_id = ".$prev_post_id[755]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[755]."' 
+													WHERE post_id = ".$prev_post_id[755]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[757]."' 
+													WHERE post_id = ".$prev_post_id[756]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[756]."' 
+													WHERE post_id = ".$prev_post_id[756]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[696]."' 
+													WHERE post_id = ".$prev_post_id[757]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[757]."' 
+													WHERE post_id = ".$prev_post_id[757]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[696]."' 
+													WHERE post_id = ".$prev_post_id[759]." 
+														AND meta_key = '_menu_item_menu_item_parent'");
+														
+				
+				$wpdb->query("UPDATE ".$wpdb->prefix."postmeta SET
+												meta_value = '".$prev_post_id[759]."' 
+													WHERE post_id = ".$prev_post_id[759]." 
+														AND meta_key = '_menu_item_object_id'");
+				
+			wp_redirect(get_bloginfo("wpurl")."/wp-admin/nav-menus.php?action=edit&menu=".$tti);								
+		

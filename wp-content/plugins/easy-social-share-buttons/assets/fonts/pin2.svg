@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2014 by original authors @ fontello.com</metadata>
+<defs>
+<font id="pin" horiz-adv-x="1000" >
+<font-face font-family="pin" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="heart" unicode="&#xe801;" d="m500-79q-14 0-25 10l-348 336q-5 5-15 15t-31 36-38 55-30 67-13 77q0 123 71 192t196 70q34 0 70-12t67-33 54-38 42-38q20 20 42 38t54 38 67 33 70 12q125 0 196-70t71-192q0-123-128-251l-347-335q-10-10-25-10z" horiz-adv-x="1000" />
+<glyph glyph-name="pinterest-circled" unicode="&#xe800;" d="m857 350q0-117-57-215t-156-156-215-58q-62 0-122 18 33 52 43 92 5 19 31 118 11-22 40-38t64-16q67 0 120 38t83 105 29 151q0 64-34 119t-96 91-142 36q-59 0-110-17t-86-43-61-61-37-72-12-75q0-58 22-102t66-62q16-7 21 11 1 4 4 17t5 17q3 13-6 24-29 34-29 84 0 84 58 145t153 61q84 0 131-46t48-119q0-95-39-161t-98-67q-34 0-54 24t-13 59q4 19 15 52t16 57 7 43q0 27-15 46t-43 18q-35 0-59-31t-24-80q0-40 14-68l-55-233q-10-39-7-99-115 51-186 157t-71 236q0 117 58 215t155 156 216 58 215-58 156-156 57-215z" horiz-adv-x="857.1" />
+<glyph glyph-name="pinterest" unicode="&#xe802;" d="m331 754q129 0 212-79t82-186q0-139-70-229t-180-90q-36 0-69 18t-45 41q-26-107-32-127-20-73-84-153-7-7-10 3-15 106 1 176l59 254q-15 28-15 72 0 51 26 86t64 34q30 0 46-19t17-50q0-18-7-45t-18-63-17-57q-8-36 14-63t60-27q64 0 105 73t41 175q0 79-50 128t-142 49q-103 0-166-65t-63-157q0-54 31-91 10-13 7-25-2-3-4-14t-3-15-5-13-8-8-13 1q-95 39-95 176 0 110 89 200t242 90z" horiz-adv-x="625" />
+</font>
+</defs>
+</svg>

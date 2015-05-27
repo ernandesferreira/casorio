@@ -1,0 +1,44 @@
+* About to connect() to www.google.fr port 443 (#15)
+*   Trying 173.194.39.47...
+* Adding handle: conn: 0x35ffa50
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 15 (0x35ffa50) send_pipe: 1, recv_pipe: 0
+* Connected to www.google.fr (173.194.39.47) port 443 (#15)
+* successfully set certificate verify locations:
+*   CAfile: /opt/lampp/share/curl/curl-ca-bundle.crt
+  CApath: none
+* SSL connection using ECDHE-ECDSA-AES128-GCM-SHA256
+* Server certificate:
+* 	 subject: C=US; ST=California; L=Mountain View; O=Google Inc; CN=*.google.com
+* 	 start date: 2014-09-24 10:12:47 GMT
+* 	 expire date: 2014-12-23 00:00:00 GMT
+* 	 subjectAltName: www.google.fr matched
+* 	 issuer: C=US; O=Google Inc; CN=Google Internet Authority G2
+* 	 SSL certificate verify ok.
+> GET /search?q=album+jeunesse&btnG=Search&client=ubuntu&channel=fs&num=100 HTTP/1.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:28.0) Gecko/20100101 Firefox/28.0
+Host: www.google.fr
+Accept: */*
+Referer: https://www.google.fr
+
+< HTTP/1.1 200 OK
+< Date: Thu, 09 Oct 2014 13:14:49 GMT
+< Expires: -1
+< Cache-Control: private, max-age=0
+< Content-Type: text/html; charset=UTF-8
+* Added cookie PREF="ID=2c2e6516425fac58:FF=0:TM=1412860489:LM=1412860489:S=iBEhvGVN692yUKpP" for domain google.fr, path /, expire 1475932489
+< Set-Cookie: PREF=ID=2c2e6516425fac58:FF=0:TM=1412860489:LM=1412860489:S=iBEhvGVN692yUKpP; expires=Sat, 08-Oct-2016 13:14:49 GMT; path=/; domain=.google.fr
+* Added cookie NID="67=dQiHLg3hqDHcduTLpDJfRR-ewL497Hm3LOdVl4VdlrN52kqGCKHV3hzwrGoFmJimLITgMKF6l5JiU0J939Wz_QOx5t4e49i3JzbGhZNlA9_gndpZ2K71XwqbrVWQNKRQ" for domain google.fr, path /, expire 1428671689
+< Set-Cookie: NID=67=dQiHLg3hqDHcduTLpDJfRR-ewL497Hm3LOdVl4VdlrN52kqGCKHV3hzwrGoFmJimLITgMKF6l5JiU0J939Wz_QOx5t4e49i3JzbGhZNlA9_gndpZ2K71XwqbrVWQNKRQ; expires=Fri, 10-Apr-2015 13:14:49 GMT; path=/; domain=.google.fr; HttpOnly
+< P3P: CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info."
+* Server gws is not blacklisted
+< Server: gws
+< X-XSS-Protection: 1; mode=block
+< X-Frame-Options: SAMEORIGIN
+< Alternate-Protocol: 443:quic,p=0.01
+< Transfer-Encoding: chunked
+< 
+* Connection #15 to host www.google.fr left intact
+* WARNING: failed to save cookies in cookie.txt

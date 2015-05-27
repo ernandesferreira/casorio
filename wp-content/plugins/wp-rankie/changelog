@@ -1,0 +1,35 @@
+@9/10/2014 v1.2.3
+fix: whatsmyserp method stopped working now updated to work.
+fix: proxy unexpected reply case covered so it get deleted after 3 times
+fix: catch keyword feature fixed.
+New: proxify google request via gmodules
+fix: jQuery .attr('checked','checked') replaced by .prop
+fix: sorting by rank bug fix
+
+
+@5/7/2014 v1.2.2
+Fix: limit log to 100 records
+
+@16/6/2014 v1.2.1
+Fix: remove proxy when permissions denied now works
+
+
+@15/6/2014 v1.2.0
+Fix: whatsmyserp proxy service
+
+
+@28 May 2014  v1.1.0
+Fix: daily email
+Fix: ajax api via UI searchIndex
+Fix: Google direct and ajax api www. prefix
+Fix: Google ajax api via ui final index
+Fix: URL of ajax api via backend
+Fix: external cron job only 
+
+@3 MAY 2014  v1.0.1
+New: Daily Email Report
+Fix: bulk delete option now works fine
+Fix: keywords add/delete now more faster
+
+@28 APR 2014 v1.0.0
+Initial Release
